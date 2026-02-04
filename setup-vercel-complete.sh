@@ -57,31 +57,40 @@ TENANT_COUNT=$(psql "$POSTGRES_URL" -t -c "SELECT COUNT(*) FROM information_sche
 if [ "$TENANT_COUNT" != "0" ]; then
     echo "⚠️  Tables already exist!"
     read -p "Do you want to DROP all tables and re-import? (yes/no): " CONFIRM
-    if [ "$CONFIRM" = "yes" ]; then
-        echo "🗑️  Dropping existing tables..."
-        psql "$POSTGRES_URL" -c "DROP TABLE IF EXISTS order_details CASCADE;" 2>/dev/null || true
-        psql "$POSTGRES_URL" -c "DROP TABLE IF EXISTS orders CASCADE;" 2>/dev/null || true
-        psql "$POSTGRES_URL" -c "DROP TABLE IF EXISTS products CASCADE;" 2>/dev/null || true
-        psql "$POSTGRES_URL" -c "DROP TABLE IF EXISTS customers CASCADE;" 2>/dev/null || true
-        psql "$POSTGRES_URL" -c "DROP TABLE IF EXISTS tenants CASCADE;" 2>/dev/null || true
-        echo "✓ Tables dropped"
-    else
+    if [ "$CONFIRM" != "yes" ]; then
         echo "❌ Cancelled"
         exit 1
     fi
 fi
 
 echo ""
+echo "📋 Creating database schema..."
+if psql "$POSTGRES_URL" -f schema.sql > schema.log 2>&1; then
+    echo "✓ Schema created successfully"
+else
+    echo "❌ Schema creation failed! Check schema.log"
+    tail -20 schema.log
+    exit 1
+fi
+
+echo ""
 echo "📦 Importing data (52MB, ~334K rows)..."
 echo "⏱️  This may take 5-10 minutes..."
+echo "💡 Tip: The file is large, so it might take longer on slower connections"
 echo ""
 
-# Import the SQL file
-if psql "$POSTGRES_URL" -f coffee_multitenant_seed.sql > import.log 2>&1; then
+# Import the SQL file with better error handling
+if timeout 600 psql "$POSTGRES_URL" -v ON_ERROR_STOP=0 -f coffee_multitenant_seed.sql > import.log 2>&1; then
     echo "✓ Data import completed!"
 else
-    echo "❌ Import failed! Check import.log for details"
-    tail -20 import.log
+    EXIT_CODE=$?
+    if [ $EXIT_CODE -eq 124 ]; then
+        echo "⏱️  Import timeout after 10 minutes!"
+        echo "💡 Try splitting the import or use faster connection"
+    else
+        echo "❌ Import failed! Check import.log for details"
+        tail -30 import.log
+    fi
     exit 1
 fi
 
