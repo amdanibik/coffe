@@ -83,10 +83,15 @@ git push origin main
 5. **Configure Project:**
    ```
    Framework Preset: Other
-   Build Command: npm install
+   Build Command: (leave default)
    Output Directory: (leave blank)
-   Install Command: npm install
+   Install Command: (leave default)
+   Root Directory: ./
    ```
+   
+   **PENTING:** Jangan set Environment Variables dulu!
+   Environment variables akan di-set setelah database dibuat.
+
 6. **Klik "Deploy"**
 7. Tunggu ~1-2 menit
 8. ✅ Backend API deployed!
@@ -134,7 +139,7 @@ vercel
 3. Environment: **Production, Preview, Development** (pilih semua)
 4. Klik **"Connect"**
 
-Vercel otomatis menambahkan environment variables:
+✅ **Vercel otomatis menambahkan environment variables berikut:**
 ```
 POSTGRES_URL
 POSTGRES_PRISMA_URL
@@ -270,17 +275,23 @@ POSTGRES_DATABASE     → Database name
 
 ### Manual set (perlu ditambahkan):
 
+**SETELAH database connected**, tambahkan environment variables tambahan:
+
 1. Di Vercel Dashboard → Project → **Settings** → **Environment Variables**
-2. Tambahkan:
+2. Klik **"Add New"**
+3. Tambahkan satu per satu:
 
-```
-CONNECTOR_API_KEY = your-production-api-key-12345
-QUERY_TIMEOUT = 30000
-NODE_ENV = production
-```
+| Key | Value |
+|-----|-------|
+| `CONNECTOR_API_KEY` | `your-production-api-key-12345` |
+| `QUERY_TIMEOUT` | `30000` |
+| `NODE_ENV` | `production` |
 
-3. Klik **"Save"**
-4. Redeploy (otomatis setelah save)
+4. Untuk setiap variable:
+   - Pilih Environment: **Production, Preview, Development** (all)
+   - Klik **"Save"**
+
+5. Setelah semua tersimpan, klik **"Redeploy"** di tab Deployments
 
 ---
 
