@@ -8,7 +8,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: '*', // Allow all origins for connector
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'X-API-Key', 'Authorization'],
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -36,12 +41,13 @@ const authenticateApiKey = (req, res, next) => {
   next();
 };
 
-// Public routes
+// Public routes (no authentication required)
 app.get('/', (req, res) => {
   res.json({
     service: 'Coffee Database Connector',
     version: '1.0.0',
     status: 'running',
+    deployed: 'vercel',
     endpoints: {
       testConnection: 'POST /api/test-connection',
       configuration: 'GET /api/configuration',
@@ -50,7 +56,17 @@ app.get('/', (req, res) => {
       orders: 'GET /api/orders',
       orderDetails: 'GET /api/orders/:orderId/details'
     },
-    authentication: 'Use X-API-Key header or apiKey query parameter'
+    authentication: 'Use X-API-Key header or apiKey query parameter',
+    note: 'All /api/* endpoints require API key authentication'
+  });
+});
+
+// Health check endpoint (no auth required)
+app.get('/health', (req, res) => {
+  res.json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime()
   });
 });
 
