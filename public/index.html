@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Database Connector - Test UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+        }
+        
+        .config-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .config-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .form-group small {
+            display: block;
+            margin-top: 5px;
+            color: #999;
+            font-size: 12px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-success {
+            background: #48bb78;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #38a169;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(72, 187, 120, 0.4);
+        }
+        
+        .btn-info {
+            background: #4299e1;
+            color: white;
+        }
+        
+        .btn-info:hover {
+            background: #3182ce;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(66, 153, 225, 0.4);
+        }
+        
+        .response-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: none;
+        }
+        
+        .response-section.active {
+            display: block;
+        }
+        
+        .response-section h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .response-box {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 15px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        
+        .response-box pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #2d3748;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .status-success {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        
+        .status-error {
+            background: #fed7d7;
+            color: #742a2a;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .loading.active {
+            display: block;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>☕ Coffee Database Connector</h1>
+            <p>Simple Node.js Database Connector Test Interface</p>
+        </div>
+        
+        <div class="config-section">
+            <h2>Database Configuration</h2>
+            
+            <div class="grid">
+                <div class="form-group">
+                    <label>Connector URL</label>
+                    <input type="text" id="connectorUrl" value="http://localhost:3000" placeholder="https://your-connector.example.com">
+                    <small>Full URL of your deployed database connector</small>
+                </div>
+                
+                <div class="form-group">
+                    <label>Connector API Key</label>
+                    <input type="text" id="apiKey" value="test-api-key-12345" placeholder="Enter your connector API key">
+                    <small>Secure API key for authenticating with your connector</small>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <div class="form-group">
+                    <label>Database Type</label>
+                    <select id="dbType">
+                        <option value="PostgreSQL">PostgreSQL</option>
+                        <option value="MySQL">MySQL</option>
+                        <option value="MongoDB">MongoDB</option>
+                    </select>
+                    <small>Type of database your connector will query</small>
+                </div>
+                
+                <div class="form-group">
+                    <label>Query Timeout (ms)</label>
+                    <input type="number" id="queryTimeout" value="30000" min="1000" max="120000">
+                    <small>Maximum time to wait for query execution (1000-120000ms)</small>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button class="btn-success" onclick="testConnection()">🔌 Test Connection</button>
+                <button class="btn-primary" onclick="getTenants()">🏢 Get Tenants</button>
+                <button class="btn-primary" onclick="getOrders()">📦 Get Orders</button>
+                <button class="btn-info" onclick="getStatistics()">📊 Get Statistics</button>
+                <button class="btn-info" onclick="getPopularProducts()">⭐ Popular Products</button>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p style="margin-top: 10px; color: white;">Loading...</p>
+        </div>
+        
+        <div class="response-section" id="responseSection">
+            <h3 id="responseTitle">Response</h3>
+            <div id="responseStatus"></div>
+            <div class="response-box">
+                <pre id="responseContent"></pre>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function getConnectorUrl() {
+            return document.getElementById('connectorUrl').value;
+        }
+        
+        function getApiKey() {
+            return document.getElementById('apiKey').value;
+        }
+        
+        function showLoading() {
+            document.getElementById('loading').classList.add('active');
+            document.getElementById('responseSection').classList.remove('active');
+        }
+        
+        function hideLoading() {
+            document.getElementById('loading').classList.remove('active');
+        }
+        
+        function showResponse(title, data, isSuccess = true) {
+            hideLoading();
+            document.getElementById('responseTitle').textContent = title;
+            document.getElementById('responseContent').textContent = JSON.stringify(data, null, 2);
+            
+            const statusBadge = document.createElement('span');
+            statusBadge.className = `status-badge ${isSuccess ? 'status-success' : 'status-error'}`;
+            statusBadge.textContent = isSuccess ? '✓ Success' : '✗ Error';
+            
+            const statusDiv = document.getElementById('responseStatus');
+            statusDiv.innerHTML = '';
+            statusDiv.appendChild(statusBadge);
+            
+            document.getElementById('responseSection').classList.add('active');
+        }
+        
+        async function makeRequest(endpoint, method = 'GET', body = null) {
+            showLoading();
+            
+            const url = getConnectorUrl() + endpoint;
+            const apiKey = getApiKey();
+            
+            const options = {
+                method: method,
+                headers: {
+                    'X-API-Key': apiKey,
+                    'Content-Type': 'application/json'
+                }
+            };
+            
+            if (body) {
+                options.body = JSON.stringify(body);
+            }
+            
+            try {
+                const response = await fetch(url, options);
+                const data = await response.json();
+                
+                return {
+                    success: response.ok,
+                    data: data,
+                    status: response.status
+                };
+            } catch (error) {
+                return {
+                    success: false,
+                    data: { error: error.message },
+                    status: 0
+                };
+            }
+        }
+        
+        async function testConnection() {
+            const result = await makeRequest('/api/test-connection', 'POST');
+            showResponse('Test Connection Result', result.data, result.success);
+        }
+        
+        async function getTenants() {
+            const result = await makeRequest('/api/tenants');
+            showResponse('Tenants List', result.data, result.success);
+        }
+        
+        async function getOrders() {
+            const result = await makeRequest('/api/orders?limit=20');
+            showResponse('Orders List (First 20)', result.data, result.success);
+        }
+        
+        async function getStatistics() {
+            const result = await makeRequest('/api/statistics');
+            showResponse('Sales Statistics', result.data, result.success);
+        }
+        
+        async function getPopularProducts() {
+            const result = await makeRequest('/api/products/popular?limit=10');
+            showResponse('Popular Products (Top 10)', result.data, result.success);
+        }
+        
+        // Auto-test connection on page load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                console.log('Page loaded. Ready for testing.');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
