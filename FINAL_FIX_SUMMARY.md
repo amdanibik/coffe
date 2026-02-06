@@ -124,7 +124,17 @@ Headers:
 
 ## 📚 Dokumentasi Baru
 
-### 1. `SCHEMA_INTROSPECTION.md`
+### 1. `DATABASE_SCHEMA_FOR_AI.md` ⭐ NEW!
+**Complete schema documentation** optimized untuk AI/LLM:
+- Struktur tabel lengkap dengan penjelasan setiap kolom
+- Common queries untuk berbagai use case (15+ contoh)
+- **Semantic query rules** untuk AI (handling Indonesian/English)
+- **Semantic mappings** produk dan istilah bisnis
+- Contoh AI conversation flows
+- Best practices untuk generate SQL
+- Multi-step query strategies
+
+### 2. `SCHEMA_INTROSPECTION.md`
 Dokumentasi lengkap tentang fitur database introspection:
 - Penjelasan fitur
 - Format request/response
@@ -132,31 +142,35 @@ Dokumentasi lengkap tentang fitur database introspection:
 - How BizCopilot uses it
 - Testing guide
 
-### 2. `BIZCOPILOT_CONNECTION_FIXED.md`
+### 3. `BIZCOPILOT_CONNECTION_FIXED.md`
 Dokumentasi tentang fix endpoint `/execute`:
 - Problem & solution
 - Request/response format
 - Security features
 - Testing instructions
 
-### 3. `test-introspect.sh`
+### 4. `test-introspect.sh`
 Script bash untuk test semua endpoint introspection:
 ```bash
-cd /home/danibik/ide-brilian/coffee
-API_KEY=your-api-key ./test-introspect.sh
+API_KEY=your-key ./test-introspect.sh
 ```
 
-### 4. `test-execute-endpoint.sh`
+### 5. `test-execute-endpoint.sh`
 Script bash untuk test endpoint `/execute`:
 ```bash
-cd /home/danibik/ide-brilian/coffee
-API_KEY=your-api-key ./test-execute-endpoint.sh
+API_KEY=your-key ./test-execute-endpoint.sh
 ```
 
-### 5. `README.md` (Updated)
-Updated dengan informasi tentang fitur baru.
+### 6. `QUICK_REFERENCE.sh`
+Quick reference guide - jalankan untuk melihat panduan cepat:
+```bash
+./QUICK_REFERENCE.sh
+```
 
-### 6. `SETUP_BIZCOPILOT.md` (Updated)
+### 7. `README.md` (Updated)
+Updated dengan informasi tentang fitur baru dan link ke DATABASE_SCHEMA_FOR_AI.md.
+
+### 8. `SETUP_BIZCOPILOT.md` (Updated)
 Updated dengan test untuk endpoint `/execute`.
 
 ---

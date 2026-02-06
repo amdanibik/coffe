@@ -27,10 +27,14 @@ Connector sekarang bisa secara otomatis mengintrospeksi struktur database:
 - ✅ Format schema yang mudah dibaca AI
 - ✅ Sample data dari setiap tabel
 
+**Dokumentasi Schema untuk AI:**
+👉 **[DATABASE_SCHEMA_FOR_AI.md](DATABASE_SCHEMA_FOR_AI.md)** - Complete schema documentation dengan semantic query rules untuk BizCopilot AI
+
 **Manfaat untuk BizCopilot AI:**
 - AI sekarang bisa "melihat" struktur database Anda
 - Bisa menjawab pertanyaan tentang data yang tersedia
 - Generate SQL query lebih akurat dengan konteks lengkap
+- Semantic search untuk product names (handle Indonesian/English)
 
 👉 **Lihat:** [SCHEMA_INTROSPECTION.md](SCHEMA_INTROSPECTION.md) untuk detail lengkap
 
