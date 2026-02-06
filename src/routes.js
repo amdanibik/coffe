@@ -1,6 +1,27 @@
 const express = require('express');
 const router = express.Router();
 const dbConnector = require('./dbConnector');
+const crypto = require('crypto');
+
+// Helper function to verify HMAC signature (optional - for enhanced security)
+function verifyHmacSignature(apiKey, payload, signature) {
+  if (!signature) {
+    return true; // Allow requests without signature for backward compatibility
+  }
+  
+  try {
+    const canonicalJson = JSON.stringify(payload, Object.keys(payload).sort(), null, 0);
+    const expectedSignature = crypto
+      .createHmac('sha256', apiKey)
+      .update(canonicalJson)
+      .digest('hex');
+    
+    return signature === expectedSignature;
+  } catch (error) {
+    console.error('HMAC verification error:', error);
+    return false;
+  }
+}
 
 // Connector metadata endpoint (for external services like bizcopilot.app)
 router.get('/connector/metadata', (req, res) => {
@@ -18,18 +39,25 @@ router.get('/connector/metadata', (req, res) => {
         connectionPooling: true
       },
       endpoints: {
+        execute: '/execute',  // PRIMARY endpoint for BizCopilot
         testConnection: '/api/test-connection',
-        execute: '/api/query',
+        configuration: '/api/configuration',
+        query: '/api/query',  // Legacy endpoint
         directConnect: '/api/db/connect',
         directExecute: '/api/db/execute',
         poolStatus: '/api/db/pool-status',
-        batch: '/api/db/batch',
-        configuration: '/api/configuration'
+        batch: '/api/db/batch'
       },
       authentication: {
         type: 'api-key',
         headerName: 'X-API-Key',
-        queryParamName: 'apiKey'
+        queryParamName: 'apiKey',
+        hmacSignature: {
+          supported: true,
+          headerName: 'X-Request-Signature',
+          algorithm: 'HMAC-SHA256',
+          optional: true
+        }
       }
     }
   });
@@ -183,6 +211,89 @@ router.post('/db/batch', async (req, res) => {
     res.status(500).json({
       success: false,
       error: error.message
+    });
+  }
+});
+
+// MAIN EXECUTE ENDPOINT - Used by BizCopilot Connector Service
+// This is the primary endpoint that BizCopilot.app will call
+router.post('/execute', async (req, res) => {
+  try {
+    const startTime = Date.now();
+    
+    // Extract request parameters (BizCopilot format)
+    const { 
+      query, 
+      query_type = 'sql', 
+      database_type = 'postgresql',
+      request_id,
+      timeout_ms = 30000,
+      params = []
+    } = req.body;
+    
+    // Optional: Verify HMAC signature for enhanced security
+    const signature = req.headers['x-request-signature'];
+    const apiKey = req.headers['x-api-key'];
+    
+    if (signature && apiKey) {
+      const isValid = verifyHmacSignature(apiKey, req.body, signature);
+      if (!isValid) {
+        return res.status(401).json({
+          success: false,
+          error: 'Invalid request signature',
+          error_code: 'INVALID_SIGNATURE'
+        });
+      }
+    }
+    
+    // Validate required parameters
+    if (!query) {
+      return res.status(400).json({
+        success: false,
+        error: 'Query is required in request body',
+        error_code: 'MISSING_QUERY'
+      });
+    }
+    
+    // Log the request for debugging
+    console.log(`[${new Date().toISOString()}] Execute request:`, {
+      request_id,
+      query_type,
+      database_type,
+      query_preview: query.substring(0, 100),
+      timeout_ms
+    });
+    
+    // Execute the query
+    const result = await dbConnector.executeQuery(query, params);
+    const executionTime = Date.now() - startTime;
+    
+    // Return response in BizCopilot expected format
+    if (result.success) {
+      res.json({
+        success: true,
+        data: result.data,
+        execution_time_ms: executionTime,
+        rows_affected: result.rowCount,
+        request_id: request_id,
+        query_type: query_type
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: result.error || 'Query execution failed',
+        error_code: 'EXECUTION_FAILED',
+        execution_time_ms: executionTime,
+        request_id: request_id
+      });
+    }
+    
+  } catch (error) {
+    console.error('Execute endpoint error:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      error_code: 'INTERNAL_ERROR'
     });
   }
 });

@@ -65,6 +65,9 @@ app.get('/', (req, res) => {
       metadata: 'GET /api/connector/metadata - Connector information',
       health: 'GET /api/connector/health - Health check',
       
+      // PRIMARY endpoint for BizCopilot integration (auth required)
+      execute: 'POST /execute - Main query execution endpoint (BizCopilot compatible)',
+      
       // Core endpoints (auth required)
       testConnection: 'POST /api/test-connection',
       configuration: 'GET /api/configuration',
@@ -192,6 +195,75 @@ app.get('/ping', (req, res) => {
 
 app.post('/ping', (req, res) => {
   res.json({ status: 'ok', pong: true, timestamp: new Date().toISOString() });
+});
+
+// PRIMARY EXECUTE Endpoint - mounted at root for BizCopilot compatibility
+// This is the main endpoint that BizCopilot connector service will call
+app.post('/execute', authenticateApiKey, async (req, res) => {
+  try {
+    const startTime = Date.now();
+    const dbConnector = require('./src/dbConnector');
+    
+    // Extract request parameters (BizCopilot format)
+    const { 
+      query, 
+      query_type = 'sql', 
+      database_type = 'postgresql',
+      request_id,
+      timeout_ms = 30000,
+      params = []
+    } = req.body;
+    
+    // Validate required parameters
+    if (!query) {
+      return res.status(400).json({
+        success: false,
+        error: 'Query is required in request body',
+        error_code: 'MISSING_QUERY'
+      });
+    }
+    
+    // Log the request for debugging
+    console.log(`[${new Date().toISOString()}] Execute request:`, {
+      request_id,
+      query_type,
+      database_type,
+      query_preview: query.substring(0, 100),
+      timeout_ms
+    });
+    
+    // Execute the query
+    const result = await dbConnector.executeQuery(query, params);
+    const executionTime = Date.now() - startTime;
+    
+    // Return response in BizCopilot expected format
+    if (result.success) {
+      res.json({
+        success: true,
+        data: result.data,
+        execution_time_ms: executionTime,
+        rows_affected: result.rowCount,
+        request_id: request_id,
+        query_type: query_type
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: result.error || 'Query execution failed',
+        error_code: 'EXECUTION_FAILED',
+        execution_time_ms: executionTime,
+        request_id: request_id
+      });
+    }
+    
+  } catch (error) {
+    console.error('Execute endpoint error:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      error_code: 'INTERNAL_ERROR'
+    });
+  }
 });
 
 // API Key Authentication Middleware (for selective routes)

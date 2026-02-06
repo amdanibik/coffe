@@ -1,5 +1,18 @@
 # ✅ Setup Cepat untuk BizCopilot.app
 
+**Status:** ✅ READY - Endpoint `/execute` telah diimplementasikan!  
+**Last Updated:** February 6, 2026
+
+---
+
+## 🎯 Important Update
+
+Aplikasi Coffee sekarang memiliki endpoint `/execute` yang **fully compatible** dengan BizCopilot connector service. Endpoint ini menangani semua query yang dikirim dari BizCopilot.
+
+**Primary Endpoint:** `POST /execute`
+
+---
+
 ## 🔗 Konfigurasi yang Anda Butuhkan
 
 Buka: https://staging-ok.bizcopilot.app/settings/database
@@ -28,6 +41,28 @@ PostgreSQL
 
 ## 🧪 Test Sebelum Setup di BizCopilot
 
+### Test 0: Execute Endpoint (NEW!)
+```bash
+curl -X POST https://coffee-ifuplp8rq-amdanibiks-projects.vercel.app/execute \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: YOUR_API_KEY" \
+  -d '{
+    "query": "SELECT 1 as test",
+    "query_type": "sql",
+    "database_type": "postgresql"
+  }'
+```
+
+**Expected Result:**
+```json
+{
+  "success": true,
+  "data": [{"test": 1}],
+  "execution_time_ms": 50,
+  "rows_affected": 1
+}
+```
+
 ### Test 1: Metadata (Public - No Auth)
 ```bash
 curl https://coffee-ifuplp8rq-amdanibiks-projects.vercel.app/api/connector/metadata
@@ -40,7 +75,10 @@ curl https://coffee-ifuplp8rq-amdanibiks-projects.vercel.app/api/connector/metad
   "connector": {
     "name": "Coffee Database Connector",
     "type": "PostgreSQL",
-    "capabilities": { ... }
+    "capabilities": { ... },
+    "endpoints": {
+      "execute": "/execute"
+    }
   }
 }
 ```
