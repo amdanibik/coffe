@@ -31,7 +31,11 @@ const authenticateApiKey = (req, res, next) => {
     });
   }
   
-  if (apiKey !== process.env.CONNECTOR_API_KEY) {
+  // Clean both API keys to handle whitespace and newline characters
+  const cleanInputKey = apiKey.toString().trim();
+  const cleanConfigKey = (process.env.CONNECTOR_API_KEY || '').toString().trim();
+  
+  if (cleanInputKey !== cleanConfigKey) {
     return res.status(403).json({
       success: false,
       error: 'Invalid API Key'
