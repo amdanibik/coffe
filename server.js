@@ -20,6 +20,13 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static files from public directory
 app.use(express.static('public'));
 
+// Request logging middleware for debugging
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  console.log('Headers:', JSON.stringify(req.headers, null, 2));
+  next();
+});
+
 // API Key Authentication Middleware
 const authenticateApiKey = (req, res, next) => {
   const apiKey = req.headers['x-api-key'] || req.query.apiKey;
@@ -94,6 +101,62 @@ app.get('/health', (req, res) => {
     timestamp: new Date().toISOString(),
     uptime: process.uptime()
   });
+});
+
+// Test connection endpoint - accessible both with and without /api prefix
+app.post('/test-connection', authenticateApiKey, async (req, res) => {
+  try {
+    const result = await dbConnector.testConnection();
+    const statusCode = result.success ? 200 : 500;
+    res.status(statusCode).json(result);
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// Additional endpoint that BizCopilot might call
+app.get('/connect', authenticateApiKey, async (req, res) => {
+  try {
+    const result = await dbConnector.testConnection();
+    res.json({
+      success: result.success,
+      message: 'Database connector is ready',
+      connection: result
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+app.post('/connect', authenticateApiKey, async (req, res) => {
+  try {
+    const result = await dbConnector.testConnection();
+    res.json({
+      success: result.success,
+      message: 'Database connector is ready',
+      connection: result
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// Ping endpoint for basic connectivity test
+app.get('/ping', (req, res) => {
+  res.json({ status: 'ok', pong: true, timestamp: new Date().toISOString() });
+});
+
+app.post('/ping', (req, res) => {
+  res.json({ status: 'ok', pong: true, timestamp: new Date().toISOString() });
 });
 
 // API Key Authentication Middleware (for selective routes)
