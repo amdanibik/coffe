@@ -68,6 +68,11 @@ app.get('/', (req, res) => {
       // PRIMARY endpoint for BizCopilot integration (auth required)
       execute: 'POST /execute - Main query execution endpoint (BizCopilot compatible)',
       
+      // Database introspection endpoints (auth required)
+      introspect: 'GET /introspect or /api/introspect - Get database schema structure',
+      schema: 'GET /schema or /api/schema - Get database schema (alias)',
+      sampleData: 'GET /sample-data or /api/sample-data - Get sample data from tables',
+      
       // Core endpoints (auth required)
       testConnection: 'POST /api/test-connection',
       configuration: 'GET /api/configuration',
@@ -262,6 +267,88 @@ app.post('/execute', authenticateApiKey, async (req, res) => {
       success: false,
       error: error.message,
       error_code: 'INTERNAL_ERROR'
+    });
+  }
+});
+
+// Introspect endpoint (root level, with auth)
+app.get('/introspect', authenticateApiKey, async (req, res) => {
+  try {
+    const dbConnector = require('./src/dbConnector');
+    const result = await dbConnector.introspectSchema();
+    
+    if (result.success) {
+      res.json({
+        success: true,
+        data: {
+          tables: result.tables,
+          schemaText: result.schemaText,
+          tableCount: result.tableCount
+        }
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: result.error
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// Schema endpoint (root level, with auth) - alias for introspect
+app.get('/schema', authenticateApiKey, async (req, res) => {
+  try {
+    const dbConnector = require('./src/dbConnector');
+    const result = await dbConnector.introspectSchema();
+    
+    if (result.success) {
+      res.json({
+        success: true,
+        schema: result.schemaText,
+        tables: result.tables,
+        tableCount: result.tableCount
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: result.error
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// Sample data endpoint (root level, with auth)
+app.get('/sample-data', authenticateApiKey, async (req, res) => {
+  try {
+    const dbConnector = require('./src/dbConnector');
+    const limit = parseInt(req.query.limit) || 3;
+    const result = await dbConnector.getSampleData(limit);
+    
+    if (result.success) {
+      res.json({
+        success: true,
+        samples: result.samples
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: result.error
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
     });
   }
 });

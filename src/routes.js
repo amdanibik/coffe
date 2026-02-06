@@ -40,6 +40,9 @@ router.get('/connector/metadata', (req, res) => {
       },
       endpoints: {
         execute: '/execute',  // PRIMARY endpoint for BizCopilot
+        introspect: '/api/introspect',  // Get database schema
+        schema: '/api/schema',  // Alias for introspect
+        sampleData: '/api/sample-data',  // Get sample data from tables
         testConnection: '/api/test-connection',
         configuration: '/api/configuration',
         query: '/api/query',  // Legacy endpoint
@@ -61,6 +64,85 @@ router.get('/connector/metadata', (req, res) => {
       }
     }
   });
+});
+
+// Database introspection endpoint - Get database schema
+router.get('/introspect', async (req, res) => {
+  try {
+    const result = await dbConnector.introspectSchema();
+    
+    if (result.success) {
+      res.json({
+        success: true,
+        data: {
+          tables: result.tables,
+          schemaText: result.schemaText,
+          tableCount: result.tableCount
+        }
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: result.error
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// Database schema endpoint (alias for introspect)
+router.get('/schema', async (req, res) => {
+  try {
+    const result = await dbConnector.introspectSchema();
+    
+    if (result.success) {
+      res.json({
+        success: true,
+        schema: result.schemaText,
+        tables: result.tables,
+        tableCount: result.tableCount
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: result.error
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// Get sample data from tables 
+router.get('/sample-data', async (req, res) => {
+  try {
+    const limit = parseInt(req.query.limit) || 3;
+    const result = await dbConnector.getSampleData(limit);
+    
+    if (result.success) {
+      res.json({
+        success: true,
+        samples: result.samples
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: result.error
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
 });
 
 // Health check endpoint for connector validation

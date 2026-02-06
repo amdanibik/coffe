@@ -6,7 +6,8 @@ Aplikasi Node.js sederhana untuk mengakses database PostgreSQL dengan data coffe
 
 - ✅ Database Connector untuk PostgreSQL
 - ✅ API Key Authentication
-- ✅ **Direct Database Connection API** (NEW!)
+- ✅ **Database Schema Introspection** (NEW! 🔍)
+- ✅ **Direct Database Connection API**
 - ✅ **BizCopilot.app Integration Ready** 🚀
 - ✅ Query Timeout Configuration
 - ✅ Test Connection Endpoint
@@ -17,6 +18,22 @@ Aplikasi Node.js sederhana untuk mengakses database PostgreSQL dengan data coffe
 - ✅ Connection Pool Management
 - ✅ Query Safety Validation
 
+## 🆕 What's New (Feb 6, 2026)
+
+### Database Schema Introspection
+Connector sekarang bisa secara otomatis mengintrospeksi struktur database:
+- ✅ Mendapatkan daftar tabel dan kolom
+- ✅ Mendeteksi tipe data dan constraint
+- ✅ Format schema yang mudah dibaca AI
+- ✅ Sample data dari setiap tabel
+
+**Manfaat untuk BizCopilot AI:**
+- AI sekarang bisa "melihat" struktur database Anda
+- Bisa menjawab pertanyaan tentang data yang tersedia
+- Generate SQL query lebih akurat dengan konteks lengkap
+
+👉 **Lihat:** [SCHEMA_INTROSPECTION.md](SCHEMA_INTROSPECTION.md) untuk detail lengkap
+
 ## 🔌 Quick Start untuk BizCopilot
 
 Jika Anda ingin menggunakan connector ini dengan BizCopilot.app:
@@ -25,7 +42,7 @@ Jika Anda ingin menggunakan connector ini dengan BizCopilot.app:
 
 **Connector URL:**
 ```
-https://coffee-ifuplp8rq-amdanibiks-projects.vercel.app
+https://coffee-git-main-amdanibiks-projects.vercel.app
 ```
 
 **Endpoint Public (No Auth):**

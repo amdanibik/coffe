@@ -208,6 +208,176 @@ class DatabaseConnector {
     };
   }
 
+  // Introspect database schema - Get all tables and their structures
+  async introspectSchema() {
+    const pool = this.getPool();
+    try {
+      // Query to get all tables with their columns
+      const schemaQuery = `
+        SELECT 
+          t.table_schema,
+          t.table_name,
+          c.column_name,
+          c.data_type,
+          c.is_nullable,
+          c.column_default,
+          c.character_maximum_length,
+          tc.constraint_type
+        FROM information_schema.tables t
+        LEFT JOIN information_schema.columns c 
+          ON t.table_name = c.table_name 
+          AND t.table_schema = c.table_schema
+        LEFT JOIN information_schema.key_column_usage kcu 
+          ON c.table_name = kcu.table_name 
+          AND c.column_name = kcu.column_name
+          AND c.table_schema = kcu.table_schema
+        LEFT JOIN information_schema.table_constraints tc 
+          ON kcu.constraint_name = tc.constraint_name
+          AND kcu.table_schema = tc.table_schema
+        WHERE t.table_schema NOT IN ('pg_catalog', 'information_schema')
+          AND t.table_type = 'BASE TABLE'
+        ORDER BY t.table_schema, t.table_name, c.ordinal_position;
+      `;
+      
+      const result = await pool.query(schemaQuery);
+      
+      // Group by tables
+      const tables = {};
+      
+      result.rows.forEach(row => {
+        const tableName = row.table_name;
+        
+        if (!tables[tableName]) {
+          tables[tableName] = {
+            schema: row.table_schema,
+            name: tableName,
+            columns: []
+          };
+        }
+        
+        if (row.column_name) {
+          // Check if column already exists (avoid duplicates due to JOINs)
+          const existingColumn = tables[tableName].columns.find(
+            col => col.name === row.column_name
+          );
+          
+          if (!existingColumn) {
+            tables[tableName].columns.push({
+              name: row.column_name,
+              type: row.data_type,
+              nullable: row.is_nullable === 'YES',
+              default: row.column_default,
+              maxLength: row.character_maximum_length,
+              constraint: row.constraint_type || null
+            });
+          } else if (row.constraint_type && !existingColumn.constraint) {
+            // Update constraint if not set
+            existingColumn.constraint = row.constraint_type;
+          }
+        }
+      });
+      
+      // Convert to array and generate schema text
+      const tablesList = Object.values(tables);
+      const schemaText = this._generateSchemaText(tablesList);
+      
+      return {
+        success: true,
+        tables: tablesList,
+        schemaText: schemaText,
+        tableCount: tablesList.length
+      };
+    } catch (error) {
+      return {
+        success: false,
+        error: error.message,
+        code: error.code
+      };
+    }
+  }
+
+  // Generate human-readable schema text for AI
+  _generateSchemaText(tables) {
+    let schemaText = `Database Schema:\n\n`;
+    
+    tables.forEach(table => {
+      schemaText += `Table: ${table.name}\n`;
+      schemaText += `Columns:\n`;
+      
+      table.columns.forEach(col => {
+        let colDesc = `  - ${col.name} (${col.type}`;
+        
+        if (col.maxLength) {
+          colDesc += `(${col.maxLength})`;
+        }
+        
+        if (!col.nullable) {
+          colDesc += ', NOT NULL';
+        }
+        
+        if (col.constraint) {
+          colDesc += `, ${col.constraint}`;
+        }
+        
+        if (col.default) {
+          colDesc += `, default: ${col.default}`;
+        }
+        
+        colDesc += ')';
+        schemaText += colDesc + '\n';
+      });
+      
+      schemaText += '\n';
+    });
+    
+    return schemaText;
+  }
+
+  // Get sample data from all tables (for AI context)
+  async getSampleData(limit = 3) {
+    const pool = this.getPool();
+    try {
+      // Get list of tables
+      const tablesQuery = `
+        SELECT table_name 
+        FROM information_schema.tables 
+        WHERE table_schema = 'public' 
+          AND table_type = 'BASE TABLE'
+        ORDER BY table_name;
+      `;
+      
+      const tablesResult = await pool.query(tablesQuery);
+      const samples = {};
+      
+      // Get sample data from each table
+      for (const row of tablesResult.rows) {
+        const tableName = row.table_name;
+        try {
+          const sampleQuery = `SELECT * FROM ${tableName} LIMIT ${limit}`;
+          const sampleResult = await pool.query(sampleQuery);
+          samples[tableName] = {
+            rowCount: sampleResult.rowCount,
+            data: sampleResult.rows
+          };
+        } catch (error) {
+          samples[tableName] = {
+            error: error.message
+          };
+        }
+      }
+      
+      return {
+        success: true,
+        samples: samples
+      };
+    } catch (error) {
+      return {
+        success: false,
+        error: error.message
+      };
+    }
+  }
+
   // Close connection pool
   async close() {
     if (this.pool) {
