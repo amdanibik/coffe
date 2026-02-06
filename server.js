@@ -94,6 +94,41 @@ app.get('/', (req, res) => {
   });
 });
 
+// POST to root - Test connection (with auth)
+app.post('/', authenticateApiKey, async (req, res) => {
+  try {
+    const result = await dbConnector.testConnection();
+    
+    if (result.success) {
+      res.json({
+        success: true,
+        message: 'Direct database connection established',
+        connection: {
+          status: 'connected',
+          timestamp: result.data.timestamp,
+          poolInfo: dbConnector.getPoolInfo()
+        },
+        connector: {
+          name: 'Coffee Database Connector',
+          version: '1.0.0',
+          type: 'PostgreSQL'
+        }
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: 'Failed to establish database connection',
+        details: result.error
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
 // Health check endpoint (no auth required)
 app.get('/health', (req, res) => {
   res.json({
