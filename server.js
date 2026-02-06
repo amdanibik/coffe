@@ -95,7 +95,8 @@ app.get('/health', (req, res) => {
 // API Key Authentication Middleware (for selective routes)
 const optionalAuth = (req, res, next) => {
   // Skip auth for connector metadata endpoints
-  if (req.path.startsWith('/connector/')) {
+  const path = req.path || req.url;
+  if (path.startsWith('/connector/') || path.includes('/connector/')) {
     return next();
   }
   return authenticateApiKey(req, res, next);
