@@ -2,6 +2,191 @@ const express = require('express');
 const router = express.Router();
 const dbConnector = require('./dbConnector');
 
+// Connector metadata endpoint (for external services like bizcopilot.app)
+router.get('/connector/metadata', (req, res) => {
+  res.json({
+    success: true,
+    connector: {
+      name: 'Coffee Database Connector',
+      version: '1.0.0',
+      type: 'PostgreSQL',
+      capabilities: {
+        directQuery: true,
+        batchQuery: true,
+        transactions: true,
+        parameterizedQueries: true,
+        connectionPooling: true
+      },
+      endpoints: {
+        testConnection: '/api/test-connection',
+        execute: '/api/query',
+        directConnect: '/api/db/connect',
+        directExecute: '/api/db/execute',
+        poolStatus: '/api/db/pool-status',
+        batch: '/api/db/batch',
+        configuration: '/api/configuration'
+      },
+      authentication: {
+        type: 'api-key',
+        headerName: 'X-API-Key',
+        queryParamName: 'apiKey'
+      }
+    }
+  });
+});
+
+// Health check endpoint for connector validation
+router.get('/connector/health', async (req, res) => {
+  try {
+    const result = await dbConnector.testConnection();
+    const poolInfo = dbConnector.getPoolInfo();
+    
+    res.json({
+      success: result.success,
+      status: result.success ? 'healthy' : 'unhealthy',
+      timestamp: new Date().toISOString(),
+      database: {
+        connected: result.success,
+        type: 'PostgreSQL',
+        poolStatus: poolInfo
+      }
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      status: 'unhealthy',
+      error: error.message
+    });
+  }
+});
+
+// Direct database connection endpoint with enhanced security
+router.post('/db/connect', async (req, res) => {
+  try {
+    const result = await dbConnector.testConnection();
+    
+    if (result.success) {
+      res.json({
+        success: true,
+        message: 'Direct database connection established',
+        connection: {
+          status: 'connected',
+          timestamp: result.data.timestamp,
+          database: result.data.config.database,
+          poolInfo: dbConnector.getPoolInfo()
+        }
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: 'Failed to establish database connection',
+        details: result.error
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// Execute secure query with connection info
+router.post('/db/execute', async (req, res) => {
+  try {
+    const { query, params, transaction } = req.body;
+    
+    if (!query) {
+      return res.status(400).json({
+        success: false,
+        error: 'Query is required in request body'
+      });
+    }
+
+    // Validate query for safety (prevent destructive operations without explicit flag)
+    const isDangerous = /drop|truncate|delete|update/i.test(query);
+    const allowDangerous = req.body.allowDestructive === true;
+
+    if (isDangerous && !allowDangerous) {
+      return res.status(403).json({
+        success: false,
+        error: 'Potentially destructive query detected. Set "allowDestructive": true to execute',
+        query: query.substring(0, 100)
+      });
+    }
+
+    const result = transaction 
+      ? await dbConnector.executeTransaction(query, params || [])
+      : await dbConnector.executeQuery(query, params || []);
+    
+    res.json({
+      success: result.success,
+      data: result.data,
+      rowCount: result.rowCount,
+      executionTime: result.executionTime,
+      query: query.substring(0, 100) + (query.length > 100 ? '...' : '')
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// Get connection pool status
+router.get('/db/pool-status', (req, res) => {
+  try {
+    const poolInfo = dbConnector.getPoolInfo();
+    res.json({
+      success: true,
+      pool: poolInfo,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// Execute batch queries
+router.post('/db/batch', async (req, res) => {
+  try {
+    const { queries } = req.body;
+    
+    if (!queries || !Array.isArray(queries) || queries.length === 0) {
+      return res.status(400).json({
+        success: false,
+        error: 'Queries array is required in request body'
+      });
+    }
+
+    if (queries.length > 50) {
+      return res.status(400).json({
+        success: false,
+        error: 'Maximum 50 queries allowed per batch'
+      });
+    }
+
+    const results = await dbConnector.executeBatch(queries);
+    
+    res.json({
+      success: true,
+      results: results,
+      totalQueries: queries.length,
+      successCount: results.filter(r => r.success).length,
+      failureCount: results.filter(r => !r.success).length
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
 // Test connection endpoint
 router.post('/test-connection', async (req, res) => {
   try {

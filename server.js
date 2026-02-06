@@ -48,16 +48,38 @@ app.get('/', (req, res) => {
     version: '1.0.0',
     status: 'running',
     deployed: 'vercel',
+    connectorUrl: `${req.protocol}://${req.get('host')}`,
     endpoints: {
+      // Connector metadata (no auth required)
+      metadata: 'GET /api/connector/metadata - Connector information',
+      health: 'GET /api/connector/health - Health check',
+      
+      // Core endpoints (auth required)
       testConnection: 'POST /api/test-connection',
       configuration: 'GET /api/configuration',
       query: 'POST /api/query',
+      
+      // Direct database connection endpoints (auth required)
+      dbConnect: 'POST /api/db/connect - Establish direct database connection',
+      dbExecute: 'POST /api/db/execute - Execute secure query with safety checks',
+      dbPoolStatus: 'GET /api/db/pool-status - Get connection pool status',
+      dbBatch: 'POST /api/db/batch - Execute batch queries',
+      
+      // Data endpoints (auth required)
       tenants: 'GET /api/tenants',
       orders: 'GET /api/orders',
       orderDetails: 'GET /api/orders/:orderId/details'
     },
     authentication: 'Use X-API-Key header or apiKey query parameter',
-    note: 'All /api/* endpoints require API key authentication'
+    note: 'All /api/* endpoints require API key authentication (except /api/connector/*)',
+    security: {
+      apiKey: 'Required in X-API-Key header or apiKey query parameter',
+      destructiveQueries: 'Require allowDestructive: true flag in request body'
+    },
+    compatible: {
+      bizcopilot: true,
+      services: ['bizcopilot.app', 'custom-integrations']
+    }
   });
 });
 
@@ -70,8 +92,17 @@ app.get('/health', (req, res) => {
   });
 });
 
-// Protected routes
-app.use('/api', authenticateApiKey, routes);
+// API Key Authentication Middleware (for selective routes)
+const optionalAuth = (req, res, next) => {
+  // Skip auth for connector metadata endpoints
+  if (req.path.startsWith('/connector/')) {
+    return next();
+  }
+  return authenticateApiKey(req, res, next);
+};
+
+// All API routes with selective authentication
+app.use('/api', optionalAuth, routes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

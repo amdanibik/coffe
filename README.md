@@ -6,10 +6,31 @@ Aplikasi Node.js sederhana untuk mengakses database PostgreSQL dengan data coffe
 
 - ✅ Database Connector untuk PostgreSQL
 - ✅ API Key Authentication
+- ✅ **Direct Database Connection API** (NEW!)
+- ✅ **BizCopilot.app Integration Ready** 🚀
 - ✅ Query Timeout Configuration
 - ✅ Test Connection Endpoint
 - ✅ RESTful API untuk akses data
 - ✅ Support untuk multitenant data
+- ✅ Transaction Support
+- ✅ Batch Query Execution
+- ✅ Connection Pool Management
+- ✅ Query Safety Validation
+
+## 🔌 Quick Start untuk BizCopilot
+
+Jika Anda ingin menggunakan connector ini dengan BizCopilot.app:
+
+**👉 Lihat:** [SETUP_BIZCOPILOT.md](SETUP_BIZCOPILOT.md) untuk panduan lengkap
+
+**Connector URL:**
+```
+https://coffee-ifuplp8rq-amdanibiks-projects.vercel.app
+```
+
+**Endpoint Public (No Auth):**
+- `GET /api/connector/metadata` - Connector information
+- `GET /api/connector/health` - Health check
 
 ## Prerequisites
 
@@ -239,11 +260,39 @@ curl http://localhost:3000/api/tenants?apiKey=your-api-key
 
 ## Testing dengan cURL
 
+Gunakan script test yang sudah disediakan:
+```bash
+# Test API reguler
+./test-api.sh
+
+# Test Direct Database Connection API
+./test-db-direct.sh YOUR_API_KEY http://localhost:3000
+```
+
 ### Test Connection:
 ```bash
 curl -X POST \
   -H "X-API-Key: test-api-key-12345" \
   http://localhost:3000/api/test-connection
+```
+
+### Test Direct Database Connection:
+```bash
+# Connect ke database
+curl -X POST \
+  -H "X-API-Key: test-api-key-12345" \
+  http://localhost:3000/api/db/connect
+
+# Execute query
+curl -X POST \
+  -H "X-API-Key: test-api-key-12345" \
+  -H "Content-Type: application/json" \
+  -d '{"query": "SELECT * FROM tenants LIMIT 5"}' \
+  http://localhost:3000/api/db/execute
+
+# Get pool status
+curl -H "X-API-Key: test-api-key-12345" \
+  http://localhost:3000/api/db/pool-status
 ```
 
 ### Get Tenants:
@@ -298,6 +347,45 @@ API akan mengembalikan error dalam format:
   "success": false,
   "error": "Error message description"
 }
+```
+
+## Dokumentasi Lengkap
+
+Untuk dokumentasi lebih lengkap tentang fitur-fitur API, silakan lihat:
+
+- **[API_DATABASE_DIRECT.md](API_DATABASE_DIRECT.md)** - Direct Database Connection API
+- **[client-example.js](client-example.js)** - Contoh client JavaScript/Node.js
+- **[client_example.py](client_example.py)** - Contoh client Python
+- **[test-db-direct.sh](test-db-direct.sh)** - Script testing lengkap
+
+### Quick Start dengan Client
+
+**JavaScript/Node.js:**
+```javascript
+const CoffeeDatabaseClient = require('./client-example.js');
+
+const client = new CoffeeDatabaseClient(
+  'your-api-key',
+  'https://your-domain.vercel.app'
+);
+
+// Get data
+const tenants = await client.getTenants();
+console.log(tenants);
+```
+
+**Python:**
+```python
+from client_example import CoffeeDatabaseClient
+
+client = CoffeeDatabaseClient(
+  api_key='your-api-key',
+  base_url='https://your-domain.vercel.app'
+)
+
+# Get data
+tenants = client.get_tenants()
+print(tenants)
 ```
 
 HTTP Status Codes:

@@ -125,6 +125,72 @@ class DatabaseConnector {
     }
   }
 
+  // Execute query with transaction
+  async executeTransaction(query, params = []) {
+    const pool = this.getPool();
+    const client = await pool.connect();
+    
+    try {
+      await client.query('BEGIN');
+      const startTime = Date.now();
+      const result = await client.query(query, params);
+      const executionTime = Date.now() - startTime;
+      await client.query('COMMIT');
+      
+      return {
+        success: true,
+        data: result.rows,
+        rowCount: result.rowCount,
+        executionTime: `${executionTime}ms`,
+        transaction: true
+      };
+    } catch (error) {
+      await client.query('ROLLBACK');
+      return {
+        success: false,
+        error: error.message,
+        code: error.code,
+        transaction: true,
+        rolledBack: true
+      };
+    } finally {
+      client.release();
+    }
+  }
+
+  // Execute batch queries
+  async executeBatch(queries) {
+    const results = [];
+    
+    for (const queryObj of queries) {
+      const { query, params = [] } = queryObj;
+      const result = await this.executeQuery(query, params);
+      results.push({
+        query: query.substring(0, 100),
+        ...result
+      });
+    }
+    
+    return results;
+  }
+
+  // Get pool information
+  getPoolInfo() {
+    if (!this.pool) {
+      return {
+        initialized: false
+      };
+    }
+    
+    return {
+      initialized: true,
+      totalCount: this.pool.totalCount,
+      idleCount: this.pool.idleCount,
+      waitingCount: this.pool.waitingCount,
+      maxConnections: this.config.max
+    };
+  }
+
   // Get configuration info
   getConfiguration() {
     return {
