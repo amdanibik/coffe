@@ -3,6 +3,8 @@ const cors = require('cors');
 require('dotenv').config();
 const dbConnector = require('./src/dbConnector');
 const routes = require('./src/routes');
+const mysqlRoutes = require('./src/mysqlRoutes');
+const mongoRoutes = require('./src/mongoRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -66,10 +68,22 @@ app.get('/', (req, res) => {
       health: 'GET /api/connector/health - Health check',
       
       // PRIMARY endpoint for BizCopilot integration (auth required)
-      execute: 'POST /execute - Main query execution endpoint (BizCopilot compatible)',
+      execute: 'POST /execute - Main query execution endpoint (PostgreSQL)',
       
-      // Database introspection endpoints (auth required)
-      introspect: 'GET /introspect or /api/introspect - Get database schema structure',
+      // MySQL endpoints (auth required)
+      mysqlExecute: 'POST /mysql/execute - MySQL query execution endpoint',
+      mysqlIntrospect: 'GET /mysql/introspect - Get MySQL database schema',
+      mysqlTenants: 'GET /mysql/api/tenants - Get tenants from MySQL',
+      mysqlOrders: 'GET /mysql/api/orders - Get orders from MySQL',
+      
+      // MongoDB endpoints (auth required)
+      mongoExecute: 'POST /mongo/execute - MongoDB query execution endpoint',
+      mongoIntrospect: 'GET /mongo/introspect - Get MongoDB database schema',
+      mongoTenants: 'GET /mongo/api/tenants - Get tenants from MongoDB',
+      mongoOrders: 'GET /mongo/api/orders - Get orders from MongoDB',
+      
+      // PostgreSQL Database introspection endpoints (auth required)
+      introspect: 'GET /introspect or /api/introspect - Get PostgreSQL database schema',
       schema: 'GET /schema or /api/schema - Get database schema (alias)',
       sampleData: 'GET /sample-data or /api/sample-data - Get sample data from tables',
       
@@ -88,6 +102,11 @@ app.get('/', (req, res) => {
       tenants: 'GET /api/tenants',
       orders: 'GET /api/orders',
       orderDetails: 'GET /api/orders/:orderId/details'
+    },
+    databases: {
+      postgresql: 'Default - /execute, /introspect, /api/*',
+      mysql: 'MySQL - /mysql/execute, /mysql/introspect, /mysql/api/*',
+      mongodb: 'MongoDB - /mongo/execute, /mongo/introspect, /mongo/api/*'
     },
     authentication: 'Use X-API-Key header or apiKey query parameter',
     note: 'All /api/* endpoints require API key authentication (except /api/connector/*)',
@@ -363,8 +382,25 @@ const optionalAuth = (req, res, next) => {
   return authenticateApiKey(req, res, next);
 };
 
+// Custom middleware for MySQL/MongoDB routes - skip auth for /connector paths
+const dbRouteAuth = (req, res, next) => {
+  const path = req.path || req.url;
+  // Skip authentication for connector metadata endpoints
+  if (path === '/connector/metadata' || path.startsWith('/connector/')) {
+    return next();
+  }
+  // Require authentication for all other paths
+  return authenticateApiKey(req, res, next);
+};
+
 // All API routes with selective authentication
 app.use('/api', optionalAuth, routes);
+
+// MySQL routes - use custom auth middleware
+app.use('/mysql', dbRouteAuth, mysqlRoutes);
+
+// MongoDB routes - use custom auth middleware
+app.use('/mongo', dbRouteAuth, mongoRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
