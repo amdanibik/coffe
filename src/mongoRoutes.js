@@ -23,6 +23,137 @@ function verifyHmacSignature(apiKey, payload, signature) {
   }
 }
 
+// Helper function to parse SQL queries and convert to MongoDB operations
+function parseSqlToMongo(sqlQuery) {
+  if (!sqlQuery || typeof sqlQuery !== 'string') {
+    return null;
+  }
+  
+  const sql = sqlQuery.trim().toUpperCase();
+  const originalSql = sqlQuery.trim();
+  
+  try {
+    // SELECT queries
+    if (sql.startsWith('SELECT')) {
+      // Check if it's a COUNT query
+      if (sql.includes('COUNT(')) {
+        // Extract table name from FROM clause
+        const fromMatch = originalSql.match(/FROM\s+(\w+)/i);
+        if (!fromMatch) return null;
+        
+        const collection = fromMatch[1];
+        
+        // Extract WHERE conditions if any
+        const whereMatch = originalSql.match(/WHERE\s+(.+?)(?:ORDER BY|LIMIT|GROUP BY|$)/i);
+        let query = {};
+        
+        if (whereMatch) {
+          // Simple WHERE parsing (supports basic equality)
+          const whereClause = whereMatch[1].trim();
+          const conditions = whereClause.split(/\s+AND\s+/i);
+          
+          conditions.forEach(condition => {
+            const eqMatch = condition.match(/(\w+)\s*=\s*['"](.+?)['"]/);
+            if (eqMatch) {
+              query[eqMatch[1]] = eqMatch[2];
+            }
+          });
+        }
+        
+        return {
+          collection,
+          operation: 'count',
+          query,
+          options: {}
+        };
+      }
+      
+      // Regular SELECT query -> find
+      const fromMatch = originalSql.match(/FROM\s+(\w+)/i);
+      if (!fromMatch) return null;
+      
+      const collection = fromMatch[1];
+      
+      // Extract WHERE conditions
+      const whereMatch = originalSql.match(/WHERE\s+(.+?)(?:ORDER BY|LIMIT|GROUP BY|$)/i);
+      let query = {};
+      
+      if (whereMatch) {
+        const whereClause = whereMatch[1].trim();
+        const conditions = whereClause.split(/\s+AND\s+/i);
+        
+        conditions.forEach(condition => {
+          const eqMatch = condition.match(/(\w+)\s*=\s*['"](.+?)['"]/);
+          if (eqMatch) {
+            query[eqMatch[1]] = eqMatch[2];
+          }
+        });
+      }
+      
+      // Extract LIMIT
+      const limitMatch = originalSql.match(/LIMIT\s+(\d+)/i);
+      const options = {};
+      if (limitMatch) {
+        options.limit = parseInt(limitMatch[1], 10);
+      }
+      
+      return {
+        collection,
+        operation: 'find',
+        query,
+        options
+      };
+    }
+    
+    // INSERT queries
+    if (sql.startsWith('INSERT INTO')) {
+      const tableMatch = originalSql.match(/INSERT INTO\s+(\w+)/i);
+      if (!tableMatch) return null;
+      
+      return {
+        collection: tableMatch[1],
+        operation: 'insertOne',
+        query: {}, // Would need more complex parsing for actual data
+        options: {},
+        note: 'INSERT parsing not fully implemented'
+      };
+    }
+    
+    // UPDATE queries
+    if (sql.startsWith('UPDATE')) {
+      const tableMatch = originalSql.match(/UPDATE\s+(\w+)/i);
+      if (!tableMatch) return null;
+      
+      return {
+        collection: tableMatch[1],
+        operation: 'updateOne',
+        query: {},
+        options: {},
+        note: 'UPDATE parsing not fully implemented'
+      };
+    }
+    
+    // DELETE queries
+    if (sql.startsWith('DELETE FROM')) {
+      const tableMatch = originalSql.match(/DELETE FROM\s+(\w+)/i);
+      if (!tableMatch) return null;
+      
+      return {
+        collection: tableMatch[1],
+        operation: 'deleteOne',
+        query: {},
+        options: {},
+        note: 'DELETE parsing not fully implemented'
+      };
+    }
+    
+    return null;
+  } catch (error) {
+    console.error('[SQL Parser] Error:', error.message);
+    return null;
+  }
+}
+
 // Root POST endpoint - test connection (PRIMARY endpoint for BizCopilot)
 // Authentication handled by middleware - accepts API key via:
 //   1. X-API-Key header
@@ -310,7 +441,43 @@ router.post('/test-connection', async (req, res) => {
 // Execute query endpoint (PRIMARY endpoint for BizCopilot compatibility)
 router.post('/execute', async (req, res) => {
   try {
-    const { collection, operation, query, options, allowDestructive } = req.body;
+    let collection, operation, query, options, allowDestructive;
+    
+    // Check if this is a SQL query or MongoDB format
+    if (req.body.query && typeof req.body.query === 'string' && !req.body.collection) {
+      // This looks like a SQL query, try to parse it
+      console.log('[MongoDB /execute] Received SQL query, attempting to parse:', req.body.query);
+      const parsed = parseSqlToMongo(req.body.query);
+      
+      if (parsed) {
+        collection = parsed.collection;
+        operation = parsed.operation;
+        query = parsed.query;
+        options = parsed.options;
+        console.log('[MongoDB /execute] Parsed SQL to MongoDB:', { collection, operation, query, options });
+      } else {
+        return res.status(400).json({
+          success: false,
+          error: 'Could not parse SQL query',
+          sqlQuery: req.body.query,
+          hint: 'SQL parsing supports basic SELECT, COUNT, FROM, WHERE, and LIMIT clauses',
+          examples: {
+            validSql: [
+              'SELECT COUNT(*) as count FROM tenants',
+              'SELECT * FROM orders LIMIT 10',
+              'SELECT * FROM tenants WHERE code = \'HQ\''
+            ]
+          }
+        });
+      }
+    } else {
+      // MongoDB format
+      collection = req.body.collection;
+      operation = req.body.operation;
+      query = req.body.query;
+      options = req.body.options;
+      allowDestructive = req.body.allowDestructive;
+    }
     
     if (!collection || !operation) {
       return res.status(400).json({
@@ -408,7 +575,43 @@ router.post('/execute', async (req, res) => {
 // Query endpoint (alias for execute)
 router.post('/query', async (req, res) => {
   try {
-    const { collection, operation, query, options, allowDestructive } = req.body;
+    let collection, operation, query, options, allowDestructive;
+    
+    // Check if this is a SQL query or MongoDB format
+    if (req.body.query && typeof req.body.query === 'string' && !req.body.collection) {
+      // This looks like a SQL query, try to parse it
+      console.log('[MongoDB /query] Received SQL query, attempting to parse:', req.body.query);
+      const parsed = parseSqlToMongo(req.body.query);
+      
+      if (parsed) {
+        collection = parsed.collection;
+        operation = parsed.operation;
+        query = parsed.query;
+        options = parsed.options;
+        console.log('[MongoDB /query] Parsed SQL to MongoDB:', { collection, operation, query, options });
+      } else {
+        return res.status(400).json({
+          success: false,
+          error: 'Could not parse SQL query',
+          sqlQuery: req.body.query,
+          hint: 'SQL parsing supports basic SELECT, COUNT, FROM, WHERE, and LIMIT clauses',
+          examples: {
+            validSql: [
+              'SELECT COUNT(*) as count FROM tenants',
+              'SELECT * FROM orders LIMIT 10',
+              'SELECT * FROM tenants WHERE code = \'HQ\''
+            ]
+          }
+        });
+      }
+    } else {
+      // MongoDB format
+      collection = req.body.collection;
+      operation = req.body.operation;
+      query = req.body.query;
+      options = req.body.options;
+      allowDestructive = req.body.allowDestructive;
+    }
     
     if (!collection || !operation) {
       return res.status(400).json({
