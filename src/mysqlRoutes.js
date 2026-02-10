@@ -24,8 +24,12 @@ function verifyHmacSignature(apiKey, payload, signature) {
 }
 
 // Root POST endpoint - test connection (PRIMARY endpoint for BizCopilot)
+// Authentication handled by middleware - accepts API key via:
+//   1. X-API-Key header
+//   2. apiKey query parameter
 router.post('/', async (req, res) => {
   try {
+    // API key already validated by middleware (dbRouteAuth)
     const result = await mysqlConnector.testConnection();
     
     if (result.success) {
