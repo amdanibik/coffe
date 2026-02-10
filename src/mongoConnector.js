@@ -22,12 +22,20 @@ class MongoDBConnector {
 
   // Initialize MongoDB connection
   async initialize() {
-    if (!this.client) {
-      this.client = new MongoClient(this.mongoUrl, this.config);
-      await this.client.connect();
-      this.db = this.client.db(this.databaseName);
+    try {
+      if (!this.client) {
+        this.client = new MongoClient(this.mongoUrl, this.config);
+        await this.client.connect();
+        this.db = this.client.db(this.databaseName);
+        console.log('[MongoDB Connector] Connected to database:', this.databaseName);
+      }
+      return this.db;
+    } catch (error) {
+      console.error('[MongoDB Connector] Failed to initialize:', error.message);
+      this.client = null;
+      this.db = null;
+      throw error;
     }
-    return this.db;
   }
 
   // Get database instance
@@ -80,6 +88,11 @@ class MongoDBConnector {
   async executeQuery(collectionName, operation, query = {}, options = {}) {
     try {
       const db = await this.getDb();
+      
+      if (!db) {
+        throw new Error('Database connection not established. Please check MONGODB_URI environment variable.');
+      }
+      
       const collection = db.collection(collectionName);
       const startTime = Date.now();
       
