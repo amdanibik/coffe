@@ -23,31 +23,7 @@ function verifyHmacSignature(apiKey, payload, signature) {
   }
 }
 
-// Root GET endpoint - return connector info
-router.get('/', (req, res) => {
-  res.json({
-    success: true,
-    connector: {
-      name: 'Coffee MySQL Database Connector',
-      version: '1.0.0',
-      type: 'MySQL',
-      status: 'running'
-    },
-    endpoints: {
-      metadata: 'GET /mysql/connector/metadata',
-      testConnection: 'POST /mysql/test-connection',
-      execute: 'POST /mysql/execute',
-      introspect: 'GET /mysql/introspect',
-      schema: 'GET /mysql/schema',
-      sampleData: 'GET /mysql/sample-data',
-      tenants: 'GET /mysql/tenants',
-      orders: 'GET /mysql/orders'
-    },
-    authentication: 'API Key required (X-API-Key header or apiKey query parameter)'
-  });
-});
-
-// Root POST endpoint - test connection
+// Root POST endpoint - test connection (PRIMARY endpoint for BizCopilot)
 router.post('/', async (req, res) => {
   try {
     const result = await mysqlConnector.testConnection();

@@ -23,31 +23,7 @@ function verifyHmacSignature(apiKey, payload, signature) {
   }
 }
 
-// Root GET endpoint - return connector info
-router.get('/', (req, res) => {
-  res.json({
-    success: true,
-    connector: {
-      name: 'Coffee MongoDB Database Connector',
-      version: '1.0.0',
-      type: 'MongoDB',
-      status: 'running'
-    },
-    endpoints: {
-      metadata: 'GET /mongo/connector/metadata',
-      testConnection: 'POST /mongo/test-connection',
-      execute: 'POST /mongo/execute',
-      introspect: 'GET /mongo/introspect',
-      schema: 'GET /mongo/schema',
-      sampleData: 'GET /mongo/sample-data',
-      tenants: 'GET /mongo/tenants',
-      orders: 'GET /mongo/orders'
-    },
-    authentication: 'API Key required (X-API-Key header or apiKey query parameter)'
-  });
-});
-
-// Root POST endpoint - test connection
+// Root POST endpoint - test connection (PRIMARY endpoint for BizCopilot)
 router.post('/', async (req, res) => {
   try {
     const result = await mongoConnector.testConnection();
