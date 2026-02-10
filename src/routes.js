@@ -707,14 +707,12 @@ router.post('/import-mongo', async (req, res) => {
   }
 
   console.log('Starting MongoDB import process...');
+  console.log('MongoDB URI (masked):', uri.replace(/:([^:@]+)@/, ':***@'));
 
   // Create a timeout promise to prevent hanging
   const timeoutPromise = new Promise((_, reject) => {
     setTimeout(() => {
-      reject(new Error('Connection timeout after 8 seconds. Please configure Network Access in MongoDB Atlas:\n' +
-        '1. Go to Security → Network Access\n' +
-        '2. Add IP Address → Allow access from anywhere (0.0.0.0/0)\n' +
-        '3. Wait 1-2 minutes for propagation'));
+      reject(new Error('Connection timeout after 8 seconds. Please wait 2-3 minutes after configuring Network Access in MongoDB Atlas, then try again.'));
     }, 8000); // 8 second timeout before Vercel kills the function
   });
 
@@ -726,6 +724,7 @@ router.post('/import-mongo', async (req, res) => {
     },
     serverSelectionTimeoutMS: 5000, // 5 second timeout
     connectTimeoutMS: 5000,
+    socketTimeoutMS: 5000,
   });
 
   try {
@@ -868,6 +867,60 @@ router.post('/import-mongo', async (req, res) => {
       success: false,
       error: errorMessage,
       code: err.code
+    });
+  }
+});
+
+// Test MongoDB Connection endpoint (simple test without import)
+router.get('/test-mongo-connection', async (req, res) => {
+  const uri = process.env.MONGODB_URI;
+
+  if (!uri) {
+    return res.status(500).json({
+      success: false,
+      error: "MONGODB_URI not configured"
+    });
+  }
+
+  const client = new MongoClient(uri, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    },
+    serverSelectionTimeoutMS: 5000,
+    connectTimeoutMS: 5000,
+    socketTimeoutMS: 5000,
+  });
+
+  const timeoutPromise = new Promise((_, reject) => {
+    setTimeout(() => reject(new Error('Connection timeout after 7 seconds')), 7000);
+  });
+
+  try {
+    await Promise.race([client.connect(), timeoutPromise]);
+    
+    const db = client.db("coffee_db");
+    await db.command({ ping: 1 });
+    
+    const collections = await db.listCollections().toArray();
+    
+    await client.close();
+    
+    return res.status(200).json({
+      success: true,
+      message: 'MongoDB connection successful',
+      database: 'coffee_db',
+      collections: collections.map(c => c.name),
+      count: collections.length
+    });
+  } catch (err) {
+    try { await client.close(); } catch (e) {}
+    
+    return res.status(500).json({
+      success: false,
+      error: err.message,
+      hint: 'If timeout: Wait 2-3 minutes after configuring Network Access (0.0.0.0/0) in MongoDB Atlas'
     });
   }
 });
