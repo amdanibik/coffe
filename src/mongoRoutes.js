@@ -52,13 +52,15 @@ router.post('/', async (req, res) => {
       res.status(500).json({
         success: false,
         error: 'Failed to establish MongoDB database connection',
-        details: result.error
+        details: result.error || result.message
       });
     }
   } catch (error) {
+    console.error('[MongoDB / POST] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.message,
+      hint: 'Check MONGODB_URI environment variable and MongoDB Atlas Network Access'
     });
   }
 });
@@ -96,15 +98,25 @@ router.post('/ping', (req, res) => {
 router.get('/connect', async (req, res) => {
   try {
     const result = await mongoConnector.testConnection();
-    res.json({
-      success: result.success,
-      message: 'MongoDB connector is ready',
-      connection: result
-    });
+    if (result.success) {
+      res.json({
+        success: true,
+        message: 'MongoDB connector is ready',
+        connection: result
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: result.error || 'Connection test failed',
+        details: result.message
+      });
+    }
   } catch (error) {
+    console.error('[MongoDB /connect GET] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.message,
+      hint: 'Check MONGODB_URI environment variable'
     });
   }
 });
@@ -112,15 +124,25 @@ router.get('/connect', async (req, res) => {
 router.post('/connect', async (req, res) => {
   try {
     const result = await mongoConnector.testConnection();
-    res.json({
-      success: result.success,
-      message: 'MongoDB connector is ready',
-      connection: result
-    });
+    if (result.success) {
+      res.json({
+        success: true,
+        message: 'MongoDB connector is ready',
+        connection: result
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: result.error || 'Connection test failed',
+        details: result.message
+      });
+    }
   } catch (error) {
+    console.error('[MongoDB /connect POST] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.message,
+      hint: 'Check MONGODB_URI environment variable'
     });
   }
 });
@@ -176,13 +198,15 @@ router.get('/introspect', async (req, res) => {
     } else {
       res.status(500).json({
         success: false,
-        error: result.error
+        error: result.error || 'Failed to introspect database schema'
       });
     }
   } catch (error) {
+    console.error('[MongoDB /introspect] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.message,
+      hint: 'Ensure MongoDB connection is established'
     });
   }
 });
@@ -204,13 +228,15 @@ router.get('/schema', async (req, res) => {
     } else {
       res.status(500).json({
         success: false,
-        error: result.error
+        error: result.error || 'Failed to retrieve database schema'
       });
     }
   } catch (error) {
+    console.error('[MongoDB /schema] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.message,
+      hint: 'Ensure MongoDB connection is established'
     });
   }
 });
@@ -223,27 +249,37 @@ router.get('/sample-data', async (req, res) => {
     if (!schemaResult.success) {
       return res.status(500).json({
         success: false,
-        error: schemaResult.error
+        error: schemaResult.error || 'Failed to retrieve schema for sample data'
       });
     }
     
     const sampleData = {};
+    const errors = [];
     
     for (const collection of schemaResult.collections) {
-      const dataResult = await mongoConnector.getSampleData(collection.collection, 3);
-      if (dataResult.success) {
-        sampleData[collection.collection] = dataResult.data.documents;
+      try {
+        const dataResult = await mongoConnector.getSampleData(collection.collection, 3);
+        if (dataResult.success) {
+          sampleData[collection.collection] = dataResult.data.documents;
+        } else {
+          errors.push({ collection: collection.collection, error: dataResult.error });
+        }
+      } catch (err) {
+        errors.push({ collection: collection.collection, error: err.message });
       }
     }
     
     res.json({
       success: true,
-      data: sampleData
+      data: sampleData,
+      ...(errors.length > 0 && { warnings: errors })
     });
   } catch (error) {
+    console.error('[MongoDB /sample-data] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.message,
+      hint: 'Ensure MongoDB connection is established'
     });
   }
 });
@@ -252,11 +288,21 @@ router.get('/sample-data', async (req, res) => {
 router.post('/test-connection', async (req, res) => {
   try {
     const result = await mongoConnector.testConnection();
-    res.json(result);
+    if (result.success) {
+      res.json(result);
+    } else {
+      res.status(500).json({
+        success: false,
+        error: result.error || 'Connection test failed',
+        message: result.message
+      });
+    }
   } catch (error) {
+    console.error('[MongoDB /test-connection] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.message,
+      hint: 'Check MONGODB_URI environment variable and MongoDB Atlas Network Access'
     });
   }
 });
@@ -329,13 +375,17 @@ router.post('/execute', async (req, res) => {
     } else {
       res.status(500).json({
         success: false,
-        error: result.error
+        error: result.error || 'Query execution failed',
+        collection: result.collection,
+        operation: result.operation
       });
     }
   } catch (error) {
+    console.error('[MongoDB /execute] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.message,
+      hint: 'Ensure MongoDB connection is established and query format is correct'
     });
   }
 });
@@ -386,13 +436,17 @@ router.post('/query', async (req, res) => {
     } else {
       res.status(500).json({
         success: false,
-        error: result.error
+        error: result.error || 'Query execution failed',
+        collection: result.collection,
+        operation: result.operation
       });
     }
   } catch (error) {
+    console.error('[MongoDB /query] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.message,
+      hint: 'Ensure MongoDB connection is established and query format is correct'
     });
   }
 });
@@ -405,16 +459,34 @@ router.post('/batch', async (req, res) => {
     if (!operations || !Array.isArray(operations)) {
       return res.status(400).json({
         success: false,
-        error: 'Operations array is required'
+        error: 'Operations array is required',
+        hint: 'Expected format: {"operations": [{"collection": "tenants", "operation": "find", "query": {}}]}'
+      });
+    }
+    
+    if (operations.length === 0) {
+      return res.status(400).json({
+        success: false,
+        error: 'Operations array cannot be empty'
       });
     }
     
     const result = await mongoConnector.executeBatch(operations);
-    res.json(result);
+    if (result.success) {
+      res.json(result);
+    } else {
+      res.status(500).json({
+        success: false,
+        error: result.error || 'Batch execution failed',
+        details: result.results
+      });
+    }
   } catch (error) {
+    console.error('[MongoDB /batch] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.message,
+      hint: 'Check operation format and MongoDB connection'
     });
   }
 });
@@ -423,11 +495,21 @@ router.post('/batch', async (req, res) => {
 router.get('/connection-status', async (req, res) => {
   try {
     const result = await mongoConnector.getConnectionStatus();
-    res.json(result);
+    if (result.success) {
+      res.json(result);
+    } else {
+      res.status(500).json({
+        success: false,
+        error: result.error || 'Failed to get connection status',
+        message: result.message
+      });
+    }
   } catch (error) {
+    console.error('[MongoDB /connection-status] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.message,
+      hint: 'MongoDB connection may not be initialized'
     });
   }
 });
@@ -435,20 +517,29 @@ router.get('/connection-status', async (req, res) => {
 // Get tenants
 router.get('/tenants', async (req, res) => {
   try {
-    const result = await mongoConnector.executeQuery('tenants', 'find', {});
+    const limit = parseInt(req.query.limit) || 100;
+    const result = await mongoConnector.executeQuery('tenants', 'find', {}, { limit });
     
     if (result.success) {
       res.json({
         success: true,
-        data: result.data.result
+        data: result.data.result,
+        count: result.data.rowCount,
+        executionTime: result.data.executionTime
       });
     } else {
-      res.status(500).json(result);
+      res.status(500).json({
+        success: false,
+        error: result.error || 'Failed to retrieve tenants',
+        collection: result.collection
+      });
     }
   } catch (error) {
+    console.error('[MongoDB /tenants] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.message,
+      hint: 'Ensure MongoDB connection is established and tenants collection exists'
     });
   }
 });
@@ -456,25 +547,35 @@ router.get('/tenants', async (req, res) => {
 // Get orders
 router.get('/orders', async (req, res) => {
   try {
-    const { tenantId } = req.query;
+    const { tenantId, limit: queryLimit } = req.query;
     
     const query = tenantId ? { tenant_id: tenantId } : {};
-    const options = { sort: { order_date: -1 }, limit: 100 };
+    const limit = parseInt(queryLimit) || 100;
+    const options = { sort: { order_date: -1 }, limit };
     
     const result = await mongoConnector.executeQuery('orders', 'find', query, options);
     
     if (result.success) {
       res.json({
         success: true,
-        data: result.data.result
+        data: result.data.result,
+        count: result.data.rowCount,
+        executionTime: result.data.executionTime,
+        filters: tenantId ? { tenant_id: tenantId } : {}
       });
     } else {
-      res.status(500).json(result);
+      res.status(500).json({
+        success: false,
+        error: result.error || 'Failed to retrieve orders',
+        collection: result.collection
+      });
     }
   } catch (error) {
+    console.error('[MongoDB /orders] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.message,
+      hint: 'Ensure MongoDB connection is established and orders collection exists'
     });
   }
 });
