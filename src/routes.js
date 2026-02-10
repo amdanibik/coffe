@@ -708,18 +708,32 @@ router.post('/import-mongo', async (req, res) => {
 
   console.log('Starting MongoDB import process...');
 
+  // Create a timeout promise to prevent hanging
+  const timeoutPromise = new Promise((_, reject) => {
+    setTimeout(() => {
+      reject(new Error('Connection timeout after 8 seconds. Please configure Network Access in MongoDB Atlas:\n' +
+        '1. Go to Security → Network Access\n' +
+        '2. Add IP Address → Allow access from anywhere (0.0.0.0/0)\n' +
+        '3. Wait 1-2 minutes for propagation'));
+    }, 8000); // 8 second timeout before Vercel kills the function
+  });
+
   const client = new MongoClient(uri, {
     serverApi: {
       version: ServerApiVersion.v1,
       strict: true,
       deprecationErrors: true,
     },
-    serverSelectionTimeoutMS: 10000, // 10 second timeout
-    connectTimeoutMS: 10000,
+    serverSelectionTimeoutMS: 5000, // 5 second timeout
+    connectTimeoutMS: 5000,
   });
 
   try {
-    await client.connect();
+    // Race connection against timeout
+    await Promise.race([
+      client.connect(),
+      timeoutPromise
+    ]);
     console.log('✅ Connected to MongoDB');
 
     const db = client.db("coffee_db");
