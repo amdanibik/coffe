@@ -57,7 +57,7 @@ class MySQLConnector {
     try {
       const pool = this.getPool();
       const connection = await pool.getConnection();
-      const [rows] = await connection.query('SELECT NOW() as current_time, VERSION() as version');
+      const [rows] = await connection.query('SELECT NOW() as timestamp, VERSION() as version');
       connection.release();
       
       return {
@@ -65,7 +65,7 @@ class MySQLConnector {
         message: 'MySQL connection successful',
         data: {
           connected: true,
-          timestamp: rows[0].current_time,
+          timestamp: rows[0].timestamp,
           version: rows[0].version,
           config: {
             host: this.config.host,
