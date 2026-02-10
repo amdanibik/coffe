@@ -364,10 +364,20 @@ router.post('/execute', async (req, res) => {
     const result = await mongoConnector.executeQuery(collection, operation, query || {}, options || {});
     
     if (result.success) {
+      // For count operations, wrap result in SQL-compatible format
+      let rows;
+      if (operation.toLowerCase() === 'count' || operation.toLowerCase() === 'countdocuments') {
+        rows = [{ count: result.data.result }];
+      } else if (Array.isArray(result.data.result)) {
+        rows = result.data.result;
+      } else {
+        rows = result.data.result ? [result.data.result] : [];
+      }
+      
       res.json({
         success: true,
         data: {
-          rows: result.data.result,
+          rows: rows,
           rowCount: result.data.rowCount,
           executionTime: result.data.executionTime
         },
@@ -434,10 +444,20 @@ router.post('/query', async (req, res) => {
     const result = await mongoConnector.executeQuery(collection, operation, query || {}, options || {});
     
     if (result.success) {
+      // For count operations, wrap result in SQL-compatible format
+      let rows;
+      if (operation.toLowerCase() === 'count' || operation.toLowerCase() === 'countdocuments') {
+        rows = [{ count: result.data.result }];
+      } else if (Array.isArray(result.data.result)) {
+        rows = result.data.result;
+      } else {
+        rows = result.data.result ? [result.data.result] : [];
+      }
+      
       res.json({
         success: true,
         data: {
-          rows: result.data.result,
+          rows: rows,
           rowCount: result.data.rowCount,
           executionTime: result.data.executionTime
         },
