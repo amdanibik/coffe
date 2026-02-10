@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# MongoDB Connection Details
-MONGO_URI="mongodb+srv://bizcopilot_test:m6bw7hOT9wXR7brt@bizcopilottest.emcd4yp.mongodb.net/coffee_db?appName=BizcopilotTest"
+# MongoDB Connection Details - Cluster Bizcopilot
+MONGO_URI="mongodb+srv://bizcopilot_test:m6bw7hOT9wXR7brt@bizcopilot.k59fjml.mongodb.net/coffee_db?retryWrites=true&w=majority&appName=Bizcopilot"
 DATABASE="coffee_db"
 EXPORT_DIR="./mongo_export"
 
