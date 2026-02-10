@@ -1,0 +1,122 @@
+[
+  {
+    "id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "name": "Andi",
+    "role": "manager",
+    "join_date": "2025-10-01",
+    "base_salary": 8500000
+  },
+  {
+    "id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "name": "Budi",
+    "role": "cashier",
+    "join_date": "2025-10-01",
+    "base_salary": 4500000
+  },
+  {
+    "id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "name": "Sari",
+    "role": "cashier",
+    "join_date": "2025-10-01",
+    "base_salary": 4500000
+  },
+  {
+    "id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "name": "Rina",
+    "role": "barista",
+    "join_date": "2025-10-01",
+    "base_salary": 4200000
+  },
+  {
+    "id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "name": "Doni",
+    "role": "barista",
+    "join_date": "2025-10-01",
+    "base_salary": 4200000
+  },
+  {
+    "id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "name": "Wati",
+    "role": "manager",
+    "join_date": "2025-10-01",
+    "base_salary": 8000000
+  },
+  {
+    "id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "name": "Rio",
+    "role": "cashier",
+    "join_date": "2025-10-01",
+    "base_salary": 4300000
+  },
+  {
+    "id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "name": "Maya",
+    "role": "cashier",
+    "join_date": "2025-10-01",
+    "base_salary": 4300000
+  },
+  {
+    "id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "name": "Fajar",
+    "role": "barista",
+    "join_date": "2025-10-01",
+    "base_salary": 4000000
+  },
+  {
+    "id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "name": "Lina",
+    "role": "barista",
+    "join_date": "2025-10-01",
+    "base_salary": 4000000
+  },
+  {
+    "id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "name": "Hadi",
+    "role": "manager",
+    "join_date": "2025-10-01",
+    "base_salary": 8000000
+  },
+  {
+    "id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "name": "Tono",
+    "role": "cashier",
+    "join_date": "2025-10-01",
+    "base_salary": 4300000
+  },
+  {
+    "id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "name": "Mila",
+    "role": "cashier",
+    "join_date": "2025-10-01",
+    "base_salary": 4300000
+  },
+  {
+    "id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "name": "Riko",
+    "role": "barista",
+    "join_date": "2025-10-01",
+    "base_salary": 4000000
+  },
+  {
+    "id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "name": "Sinta",
+    "role": "barista",
+    "join_date": "2025-10-01",
+    "base_salary": 4000000
+  }
+]

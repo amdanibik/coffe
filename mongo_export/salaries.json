@@ -1,0 +1,137 @@
+[
+  {
+    "id": "c0ef40f5-7209-40db-9b15-1db283e8e33b",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "month": "2026-01",
+    "base_salary": 8500000,
+    "attendance_bonus": 150000,
+    "total_salary": 8650000
+  },
+  {
+    "id": "f529ee22-e534-48ef-b959-c8dfa51a50d1",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "month": "2026-01",
+    "base_salary": 4500000,
+    "attendance_bonus": 145000,
+    "total_salary": 4645000
+  },
+  {
+    "id": "96a3ccd2-3b24-4981-96b7-a59cb2f7b0d5",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "month": "2026-01",
+    "base_salary": 4500000,
+    "attendance_bonus": 135000,
+    "total_salary": 4635000
+  },
+  {
+    "id": "c891033f-c49c-4a38-9742-c1858c842a0a",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "month": "2026-01",
+    "base_salary": 4200000,
+    "attendance_bonus": 145000,
+    "total_salary": 4345000
+  },
+  {
+    "id": "33b5e888-3a3d-4641-bc38-4e4885d9ae57",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "month": "2026-01",
+    "base_salary": 4200000,
+    "attendance_bonus": 155000,
+    "total_salary": 4355000
+  },
+  {
+    "id": "1135e955-d0ee-414e-ba62-0d46fce4e62d",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "month": "2026-01",
+    "base_salary": 8000000,
+    "attendance_bonus": 140000,
+    "total_salary": 8140000
+  },
+  {
+    "id": "0abab2bc-8fd6-477e-9055-8477b52c79cf",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "month": "2026-01",
+    "base_salary": 4300000,
+    "attendance_bonus": 150000,
+    "total_salary": 4450000
+  },
+  {
+    "id": "87a32499-5155-4fde-bb32-8031d7f72e94",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "month": "2026-01",
+    "base_salary": 4300000,
+    "attendance_bonus": 150000,
+    "total_salary": 4450000
+  },
+  {
+    "id": "9e932457-ed50-45fc-82f6-08a6a8d3f490",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "month": "2026-01",
+    "base_salary": 4000000,
+    "attendance_bonus": 145000,
+    "total_salary": 4145000
+  },
+  {
+    "id": "8e77ea6f-3437-43de-aaf7-97077f10c64f",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "month": "2026-01",
+    "base_salary": 4000000,
+    "attendance_bonus": 155000,
+    "total_salary": 4155000
+  },
+  {
+    "id": "4eeb7b5e-e7f3-4576-af90-6da1803fc0aa",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "month": "2026-01",
+    "base_salary": 8000000,
+    "attendance_bonus": 150000,
+    "total_salary": 8150000
+  },
+  {
+    "id": "ffad95d5-eea3-4125-8f6c-6b1b4d04613b",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "month": "2026-01",
+    "base_salary": 4300000,
+    "attendance_bonus": 150000,
+    "total_salary": 4450000
+  },
+  {
+    "id": "02a403d8-fb44-4a22-9e65-ad43bb46546e",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "month": "2026-01",
+    "base_salary": 4300000,
+    "attendance_bonus": 160000,
+    "total_salary": 4460000
+  },
+  {
+    "id": "3b5f55f0-7156-4823-9d02-bf6cbc9a63c2",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "month": "2026-01",
+    "base_salary": 4000000,
+    "attendance_bonus": 140000,
+    "total_salary": 4140000
+  },
+  {
+    "id": "b8e37033-4a37-421d-9597-88639e5adb67",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "month": "2026-01",
+    "base_salary": 4000000,
+    "attendance_bonus": 140000,
+    "total_salary": 4140000
+  }
+]

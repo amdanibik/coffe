@@ -1,0 +1,3362 @@
+[
+  {
+    "id": "01d276c7-1776-44df-a058-a0eaf81e8e25",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-04",
+    "status": "present"
+  },
+  {
+    "id": "f91f867a-e722-4cef-90ab-76f851084e9b",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "12da0e1f-d56b-4f5b-9b6c-6e2cca00d712",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "82180056-eaa9-4261-9837-d47e540de2af",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-07",
+    "status": "present"
+  },
+  {
+    "id": "31e92e17-54d3-4920-8dd0-44dd46fa25c0",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-08",
+    "status": "present"
+  },
+  {
+    "id": "425a3d97-6309-4190-bce5-99d4a2f20f24",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-09",
+    "status": "present"
+  },
+  {
+    "id": "de2a5463-d574-44c5-9c49-c0fa011f9821",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "69dd4d66-ed0c-4820-94f2-b21e986af9a8",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-11",
+    "status": "absent"
+  },
+  {
+    "id": "57d0b03e-675f-42bc-8ba4-4730605e01c4",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "cc62138c-f0aa-4bf8-a26a-fa367a5aa3ce",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "d284a6f3-200f-4696-9928-0f09a65f2dae",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "8b3c6973-8854-419a-8de4-502b825fd6fe",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-15",
+    "status": "present"
+  },
+  {
+    "id": "07cf53d2-a2cc-40cc-a9b6-7676254c82f3",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-16",
+    "status": "present"
+  },
+  {
+    "id": "6c1e9959-4172-4349-96cd-36ac7c2adb03",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-17",
+    "status": "absent"
+  },
+  {
+    "id": "7b6a294e-4d90-4a66-8a9f-792ad6ca39ba",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "293f23e4-047a-428e-9cb3-6ae7d2656c84",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "d826c69e-fd47-494d-97f2-54f0924539d1",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "d2614cd5-b16a-4598-b118-93621fc2affe",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "d555d13d-bf8d-4f11-96c2-ae2a03ab9e4d",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "2a439cca-b6b2-4775-9155-500fdebdecea",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "86d03283-7a33-448d-a414-3c2adb0074ac",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "26cb42ec-351f-4fa8-b290-267f469fc751",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-25",
+    "status": "present"
+  },
+  {
+    "id": "3a5a3b5f-9b94-41f0-8423-3a0b9732ec7b",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "12bb47d9-f793-453b-b2d7-fba48dd6228f",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "356ac29b-3a10-414b-be61-d49d735e9893",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-28",
+    "status": "present"
+  },
+  {
+    "id": "712fbdc0-b89c-46bf-a352-3aa8fedd31b3",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-29",
+    "status": "present"
+  },
+  {
+    "id": "1be2b792-06de-4409-8a8c-dc0387e47f50",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-30",
+    "status": "present"
+  },
+  {
+    "id": "ebd11f42-5b77-49c5-bb75-b84ada3c7782",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "b4b7c2f2-033f-46d3-b8eb-f01a311e617d",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "7af59cc7-d093-48f2-9abf-a0720117516f",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "565e05ea-b347-4e4d-a196-1cc558493173",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "e17ea543-f4a3-45dd-8c2b-79f614e79161",
+    "employee_id": "a2d63c25-beb5-49cc-a476-5842009dad4c",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "819b06d7-f568-4895-8680-7a8841c23079",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-04",
+    "status": "present"
+  },
+  {
+    "id": "849d33f3-e8ce-4649-9435-b35da19d97ee",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "c0d5f185-85a4-447c-8423-24b67823cf3b",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "13c80414-d651-4990-9ebd-b8da717cf9d1",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-07",
+    "status": "present"
+  },
+  {
+    "id": "a730c436-d38f-463a-a39f-5b2bd049ca34",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-08",
+    "status": "present"
+  },
+  {
+    "id": "6ed19032-fdcc-4309-811e-023b9d92102d",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-09",
+    "status": "absent"
+  },
+  {
+    "id": "14cfe3bd-f89f-4f94-ab58-c6a3ab305675",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "a39b3ae5-72c8-44bc-a738-e388ddfb5ea0",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "9e9fa491-e8fd-4091-a8a8-93d9a410ffa4",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "f7b171f0-c352-4924-909b-ee710e6ecee5",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-13",
+    "status": "late"
+  },
+  {
+    "id": "1af38f42-df08-4ba4-810f-9186eeeeb3c6",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "1f5686e1-035b-4bdb-a8b6-f45891c19c1c",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-15",
+    "status": "present"
+  },
+  {
+    "id": "69936c4d-3949-4a26-8539-b19b0e92a7b2",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-16",
+    "status": "present"
+  },
+  {
+    "id": "713cfb03-2e47-4f4f-a6fd-15005dbf45e1",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-17",
+    "status": "present"
+  },
+  {
+    "id": "9b94c1a7-1cf6-4b64-b500-607e9e5a3eb5",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-18",
+    "status": "late"
+  },
+  {
+    "id": "bb62fa2b-4471-43c6-a407-f06691fdda0c",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "1cf1e179-1d8f-46bc-9929-57de0bff5d4d",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "d5b5fee8-003f-4140-9ee0-3579d8223667",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "8c3865b3-20bd-42b0-9ecf-18c2cd6839d3",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "a03cd537-1705-4282-a777-cf9a2eee4e2a",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "05525688-1490-41b9-a848-6fa72b0b58d3",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "7d2f244b-b37f-47e8-ab2e-931c4a3350ec",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-25",
+    "status": "present"
+  },
+  {
+    "id": "6d198c6f-650c-44f2-8606-e5b59f94b02f",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "13902796-b09c-4c5d-856b-48163bbe7be7",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "b9bc3dff-7d13-4cce-b8a9-d2e8260200b6",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-28",
+    "status": "present"
+  },
+  {
+    "id": "38a7ae7a-3f63-4de9-a344-26968d8abe2b",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-29",
+    "status": "present"
+  },
+  {
+    "id": "aee33b34-e0c2-458b-9b21-4172707829af",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-30",
+    "status": "present"
+  },
+  {
+    "id": "e2eb9eba-8f28-4027-8d9f-ba40fc30afc6",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "7332d6b7-5f1c-4e84-aec3-2aaef6f446f6",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "1f42bcd5-4261-476b-ba23-940b8d9e672f",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "ebb0ae52-e401-41f0-9e3b-6ab399036b6d",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "bc267d74-80f5-4ddf-9707-780a85c4a1ee",
+    "employee_id": "075529f6-bfa3-43f1-b4bf-a22c09e07120",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "61180173-b684-4460-9146-5e1f7958dc7f",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-04",
+    "status": "absent"
+  },
+  {
+    "id": "21e12b87-1f32-42f1-a30e-5bca96895c01",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "b3877d12-9e1f-4dff-89df-9c1fb026e644",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "5f668dca-515e-4a6d-9d47-68f8da3dff3f",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-07",
+    "status": "present"
+  },
+  {
+    "id": "cf081c41-de75-4c73-8564-df21d1f912b7",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-08",
+    "status": "absent"
+  },
+  {
+    "id": "e88c91d8-4cdb-4f36-ae46-30d92eae005f",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-09",
+    "status": "present"
+  },
+  {
+    "id": "fcb29763-b3f7-44e0-9651-19480f083f73",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "4ab743bf-efe7-41bb-9eda-b466653f3351",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "b3230547-cf81-4e03-90e2-7f18d4b76b05",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "6b170c96-f488-4613-a3ff-e2918b2c8368",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "fd25b3e7-2058-4208-b80c-d605e3d442e0",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "05bcec2e-bdc1-4925-81d0-eebcd455437b",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-15",
+    "status": "absent"
+  },
+  {
+    "id": "314f87d8-94a8-4d84-ade5-3404497d9f0d",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-16",
+    "status": "present"
+  },
+  {
+    "id": "52f82cd7-3fb3-4d47-aae0-a38c57118003",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-17",
+    "status": "present"
+  },
+  {
+    "id": "896f86e7-c476-45ff-a529-51b14e94859f",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "00fcfe74-b7b7-409e-9713-9462155621e4",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "be0b6be4-e271-4a8b-be9e-7cbb7f1e0d80",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "59c61ec1-1682-4ff3-86af-70bc5fdd7439",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "442a914a-b525-4361-a58b-2ee3923f81e8",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "e517fea1-035e-44bb-bf69-7022bdc5b87d",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-23",
+    "status": "absent"
+  },
+  {
+    "id": "45adc905-fc37-4c61-8cf9-13cd69d30080",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "62d73f95-27a3-4ce2-a336-babdd807312b",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-25",
+    "status": "present"
+  },
+  {
+    "id": "d401e87b-3493-492e-ab1f-87e73cb0aa9f",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "a2433586-9d6e-43ad-b7dd-15f161b39393",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-27",
+    "status": "absent"
+  },
+  {
+    "id": "2152e148-4cba-44ff-b6f2-6c981870e46d",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-28",
+    "status": "present"
+  },
+  {
+    "id": "24aab086-8e4d-4b89-861d-c8e469946369",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-29",
+    "status": "present"
+  },
+  {
+    "id": "79323f81-2583-4ea7-9410-b95bb53a7780",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-30",
+    "status": "present"
+  },
+  {
+    "id": "cdc9f1bb-ace9-48ab-bae9-65656ce5db0a",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "e2513c55-22d2-490f-8016-91c2e3516a87",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "91e3306b-c625-46eb-9260-39986672a577",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "19d42c92-15f9-4e14-b785-0ad689b31698",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "c9dde21b-9289-4ad4-af27-36f87b25e00c",
+    "employee_id": "612e6e8a-351f-4426-b1fd-871f446615e9",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "442d80d1-7e32-4447-b05a-67541b5cd3e3",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-04",
+    "status": "present"
+  },
+  {
+    "id": "b553103e-673e-47f1-af64-154726cdf185",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "4b4e41ef-bbd2-4e9b-ad6c-e8db77e1d0d5",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "e792e183-eebd-40a0-9d2d-fa7ce3db4550",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-07",
+    "status": "present"
+  },
+  {
+    "id": "5b2b80aa-9a7c-4ccf-9567-ddd740f2305a",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-08",
+    "status": "present"
+  },
+  {
+    "id": "a69f84d6-5583-45b6-8cf4-89a61ec0f76e",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-09",
+    "status": "present"
+  },
+  {
+    "id": "62ea968e-3736-4fe9-be7b-c3de1f5b1809",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "d5a1d39e-18fd-4910-9c44-9f523a6fe42b",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "70294cbd-5be2-4bd8-a5fd-b422e362e422",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "cc9f57d2-7d4d-4ae8-8f17-2708f14d83f3",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "278e8ad6-6a87-4ddf-bcc5-788e2e6ebee2",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "1271e289-bb62-44ce-ac60-ff0e51e30ad8",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-15",
+    "status": "present"
+  },
+  {
+    "id": "52a1cb80-de35-4d88-b1c9-f0a9524f8ac5",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-16",
+    "status": "late"
+  },
+  {
+    "id": "f63da77b-3bc2-4279-a9fa-f2738271b45c",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-17",
+    "status": "present"
+  },
+  {
+    "id": "3a721948-04fc-4808-bb29-0cbe65c2c3d1",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "ee3c9f37-4399-454e-89ff-f49d5f2a934d",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "e77f572f-1826-48cf-ae44-d0415ee4fbc9",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "4fbdccdb-17bc-449c-92e0-28c8bee77620",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "c8079ce3-f0f8-447c-9c0e-1ff9a3581b52",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "2b0ff37d-aefc-4078-b563-5c416014ee34",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "64f5d788-e1b9-43e0-a88a-9949ef02d7c2",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "1c3a9c6d-42b0-43f1-bada-f7094e1ad50b",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-25",
+    "status": "present"
+  },
+  {
+    "id": "42f51d75-e971-4283-9c02-03027b45494a",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "748f9247-3fbb-4fd7-a816-d39dd22f33c3",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "d745eef4-e514-44df-b22c-d4134ca1e4ec",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-28",
+    "status": "present"
+  },
+  {
+    "id": "366327c8-c628-4f6f-bbf2-939ffbfbac1f",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-29",
+    "status": "absent"
+  },
+  {
+    "id": "d56e7810-c74d-4b62-b614-617a0a179aef",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-30",
+    "status": "late"
+  },
+  {
+    "id": "885bd2aa-8448-4afb-82c1-d7c0ea9dc584",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "9c8d111d-7c6a-4a02-a726-6e967c351142",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "25334b6d-71e4-419b-a9d1-798116be04a2",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "750bad0b-95fc-4622-afa9-36d8c7a6b84f",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "9a039f17-63db-4938-b88a-bcfd1b076f13",
+    "employee_id": "6a993e6b-1f52-4287-8f53-7fa58bf05935",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "f286dce5-ee26-44aa-b1ef-44d0f2031762",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-04",
+    "status": "present"
+  },
+  {
+    "id": "ff15a166-d369-413d-a8e4-9d6775b50d9a",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "f5086936-9a8a-4767-9b8e-f72a7df55afa",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "6c0e49e1-1ca7-41c0-9845-47816b79a4f5",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-07",
+    "status": "late"
+  },
+  {
+    "id": "77f1c05d-7e7e-4897-9e2e-bf54db1705e9",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-08",
+    "status": "present"
+  },
+  {
+    "id": "2e8e4910-0ca9-4b54-960e-f47baea46f51",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-09",
+    "status": "present"
+  },
+  {
+    "id": "94b43f7a-169c-4e81-ac77-7e3956c12de1",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "3f01e555-456b-4c58-bec3-4dc038db4081",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "5bdd2f36-6aee-4be1-bbf7-5f72e824ccb9",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "8cb98f11-cdd9-4d56-be76-ad417f31a23b",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "a52e5a43-c67a-4363-ade5-0c0f516fe575",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "84bd5aa6-72b4-4db9-b738-ead8a04eecd2",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-15",
+    "status": "present"
+  },
+  {
+    "id": "ef43c36d-3301-4226-acea-f8bbde958047",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-16",
+    "status": "present"
+  },
+  {
+    "id": "53959222-48e3-4a0f-8bf0-39db416bd6f1",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-17",
+    "status": "present"
+  },
+  {
+    "id": "326507a0-277b-44f0-9a94-12945ea75704",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "fd054134-4a1d-4455-963b-8599012ac59c",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "fe9ef2ae-5763-47a3-8ab3-67f14f4e4b26",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "287a6fec-1372-434a-a994-885b32389dc2",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "98144183-87a7-420e-b63b-e3cc50a8a6fe",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "58ec0546-c3d6-42bc-a231-4fa4516eda2f",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "fd3717ab-cd92-448b-9028-297fb8a9a606",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "f98e7619-a478-4fea-a099-b3f5dbcfe464",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-25",
+    "status": "present"
+  },
+  {
+    "id": "c8383984-f9ea-4440-b74c-45f65d6acd63",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "b46d2736-1f5c-49ab-8c37-33d293fc9805",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "0b1ef631-705e-4691-9009-d8957db1f1b5",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-28",
+    "status": "present"
+  },
+  {
+    "id": "cdba96db-1b36-47e1-a2b9-122cd629b2db",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-29",
+    "status": "present"
+  },
+  {
+    "id": "43b33af3-36c2-48ed-9112-41490cce86ff",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-30",
+    "status": "present"
+  },
+  {
+    "id": "f5b0e79d-abe5-41d0-ba47-8211c1f83dbd",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "adfefba2-f67c-4404-98dc-f845eda5e17a",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "a1ae6706-a9ae-4901-80f7-267aee32ea98",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "4bed0944-1dc6-4563-846d-cd678ca3e7bf",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "1bb4057d-56e4-431c-96f8-7fe39417d5c2",
+    "employee_id": "a0eb96e3-2668-474f-9e29-b95aa092f3c3",
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "5a3df1d5-0cd2-4f19-af20-471877e335df",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-04",
+    "status": "present"
+  },
+  {
+    "id": "32ac5715-5cbc-4621-a714-351fd3852580",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "9fe7ae5a-6993-4df8-9f98-081d28a7c02d",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "b9705963-fb18-404c-b8a5-82fb7e523d50",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-07",
+    "status": "present"
+  },
+  {
+    "id": "212234fd-61b0-40cc-887c-5fb83ab24330",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-08",
+    "status": "present"
+  },
+  {
+    "id": "80845fed-25a7-42ad-9f5d-a4cee2c0012e",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-09",
+    "status": "present"
+  },
+  {
+    "id": "7fc008e4-5dab-486d-918b-37c423c1d26b",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "83636d00-ea12-4f71-a532-7c0228390f55",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "1cb646c2-3996-4af4-ab0f-93f14fdd35fc",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "1eb22a18-58b8-4da2-81b6-e63b5499c435",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "b2e51737-12be-4816-a328-50763c383e30",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-14",
+    "status": "late"
+  },
+  {
+    "id": "fda6380a-02c3-4b0e-b757-da69af2bccbf",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-15",
+    "status": "present"
+  },
+  {
+    "id": "829f2a50-a7c1-47ab-a7eb-93699cd384d9",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-16",
+    "status": "present"
+  },
+  {
+    "id": "95f8558f-16d6-469e-99bf-502a28471c4c",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-17",
+    "status": "late"
+  },
+  {
+    "id": "1a5d748d-b877-4e33-8f08-44386739719a",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "4edfa683-619b-4acd-8608-328cdc76d115",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "cf857fc6-b3c8-40c4-b319-21d2b1139ce5",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "9b6dee2c-2865-48c9-b10f-35d003b3330b",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "f946869a-4aa5-419b-835f-3c11aae0359d",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "295d8c0c-01d9-47ba-ad9e-4b817e82828c",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "1a567bbf-c909-4251-8393-464e89b9ddf8",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "ddf3f953-2af7-4c9a-afe9-db51516034ba",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-25",
+    "status": "present"
+  },
+  {
+    "id": "00dd1ad4-701b-4a08-baa6-2616be80211b",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-26",
+    "status": "absent"
+  },
+  {
+    "id": "3630225e-7ae2-4029-9bba-01439441058d",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "ad43ba0a-0b4d-4fe8-b08a-d7fb5ce00545",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-28",
+    "status": "late"
+  },
+  {
+    "id": "da7f9206-89c2-40b8-b0b4-a27a48ec347d",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-29",
+    "status": "present"
+  },
+  {
+    "id": "8c9c7e6d-e2af-4179-8699-5edd417f4071",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-30",
+    "status": "present"
+  },
+  {
+    "id": "58062ac9-8795-400b-9e70-edd796ecfb4d",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "e199fa9c-5cb4-4504-8456-236b04822f3e",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "24a4d094-fb45-48ac-9250-87bca4a2f722",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "1bd48946-a55b-4653-8064-438edeb2e226",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "7c290206-427a-4337-9b1c-be28baa88db1",
+    "employee_id": "77d46b92-a704-4f1a-88ea-46fe16e4a6e6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "9d6a9fd3-11b4-4026-a352-99ac0b4a48dd",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-04",
+    "status": "present"
+  },
+  {
+    "id": "1262d96b-53d9-4787-ae96-36554074d201",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "222e9dc0-d6a4-41f2-896d-2ad4ed05772e",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "37ee1fb9-c6b7-4ad9-8881-a22602622293",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-07",
+    "status": "present"
+  },
+  {
+    "id": "8a94b046-0352-473c-8b49-d3831782d683",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-08",
+    "status": "present"
+  },
+  {
+    "id": "d8bff14c-b5e1-4829-bbc2-faebf9667aa6",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-09",
+    "status": "present"
+  },
+  {
+    "id": "b52e3634-b284-47c8-b711-48ce3cbaf914",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "b195a02a-66e4-42b9-9c02-2b7262255ef7",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "203b26be-5ba3-4fbe-85cf-47f65ba2e1c4",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "79754e5e-020b-45f6-b08b-574ec46c0d8a",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "32e00d2e-9382-4262-81d7-f80b9250bc38",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "0ac973e2-52ca-4147-982c-f978b63bbf37",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-15",
+    "status": "present"
+  },
+  {
+    "id": "3f5dc48c-1ec5-42c2-bb62-b099f4b3a310",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-16",
+    "status": "present"
+  },
+  {
+    "id": "99404bf2-ff04-4dd0-ba10-d17183b6cf6d",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-17",
+    "status": "present"
+  },
+  {
+    "id": "6c3ebbb2-70b9-44bb-81dc-02440c016055",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "e574d5d3-233c-4ff2-81bc-8e004c4ded3c",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "9ececd02-47c0-4030-8145-f0f3935fc12f",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "a3f783cf-59b6-4c99-9297-fcccd5c23217",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "a2e13200-5be6-4e86-8e15-c1ffbbcb9f3b",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "38c53059-f2a5-4eef-91a2-a76ba95f949a",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "22b70b02-9b1a-4466-9feb-99190380b86b",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "609144b9-52a3-4661-b9c2-184083f89cec",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-25",
+    "status": "absent"
+  },
+  {
+    "id": "71e95372-ed72-461f-9cee-ffaa4545ca6b",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "95098819-94e5-490a-b4db-17e0b6daf7d8",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "63632732-73b5-4d90-84f3-b21bbbd93ad3",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-28",
+    "status": "late"
+  },
+  {
+    "id": "4771ea8b-8637-4693-8a35-2f4ef8222a99",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-29",
+    "status": "present"
+  },
+  {
+    "id": "588fde7d-752c-435a-ba96-7a1759b3f291",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-30",
+    "status": "present"
+  },
+  {
+    "id": "34b71235-1f63-4efb-ad24-787e749803bc",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "a7390f96-e50a-40c5-abb1-1c1f3022e27f",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "67e13ea7-3703-474e-94ef-481c87ae48a9",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "1b043023-eabb-433f-b6fb-03c4e206f607",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "d8c8cd73-0949-4bd9-834d-aa9b765bee87",
+    "employee_id": "27d78e23-cdc7-4a5d-a804-98e12555d5c6",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "30ab2b1a-acab-4a2b-b259-f8a7cfb38fd2",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-04",
+    "status": "absent"
+  },
+  {
+    "id": "cf1535cd-4d39-446b-8ee9-bb5aeca492e2",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "c7db651b-e27b-47fb-b2ac-cc85a5b62500",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "be134ebc-167a-44e2-82de-6482f18825eb",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-07",
+    "status": "present"
+  },
+  {
+    "id": "95444484-f3af-4565-a475-d71cf18f2269",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-08",
+    "status": "present"
+  },
+  {
+    "id": "2daf38fb-88c3-4308-a371-a18372c0b399",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-09",
+    "status": "present"
+  },
+  {
+    "id": "62010a2c-4b0d-4366-935d-3286afd956b4",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "8367daa7-372a-4c10-97f0-a68a41d28d79",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "ca6afb9f-eb1e-454c-8724-c328a9202cbd",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "a047b46e-b01f-4dfd-b08f-20ee20609bd6",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "0bfeb894-0c5b-4972-b657-228808f38c2b",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "bd2ce797-c608-4424-9217-87fe26fa7c34",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-15",
+    "status": "present"
+  },
+  {
+    "id": "d5bff5ae-c198-428e-8556-75f9c935341b",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-16",
+    "status": "present"
+  },
+  {
+    "id": "9bcb0057-8bd7-475d-a3c6-eb1c2e0fdad9",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-17",
+    "status": "present"
+  },
+  {
+    "id": "23672835-d396-43f8-bed6-884625385db9",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "0f869731-0914-4907-bdd4-7df77dcdafab",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "163777cd-a902-4262-8682-8b9c17ea7362",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "7e500563-461d-44d4-8292-e044e926ab48",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "1fab4f87-64ff-4fe6-b233-47a12b105e53",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "ce2a517a-6b56-4564-a5f3-0a5c5605bdc4",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "bcf2d959-a768-4221-ae03-6b9e8ef0a39c",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "cee14948-34ef-41f5-9f71-802cd19da4db",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-25",
+    "status": "present"
+  },
+  {
+    "id": "2f3ed71e-67b1-47e4-9ee1-afb4ff862583",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "f4739a5a-386d-4df1-aa78-805e42aa6c6e",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "395112e8-828b-474e-9464-44921f5de412",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-28",
+    "status": "present"
+  },
+  {
+    "id": "eb9f3e29-9566-45ec-8ffc-94ad5b231eb9",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-29",
+    "status": "present"
+  },
+  {
+    "id": "abf350a1-b0af-419b-9a21-8ec9813db8fc",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-30",
+    "status": "present"
+  },
+  {
+    "id": "cf2db39d-da4a-474b-8c4d-ed573625bcec",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-31",
+    "status": "late"
+  },
+  {
+    "id": "79088665-aba1-4d49-8bd1-8666e29054dd",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "7586278f-c734-4a88-801e-e0818cb84af2",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "74f32486-4b8f-4e89-bc1a-ca1448d7e213",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "e3df8899-559d-457b-b3f4-c35c0c6ae2b9",
+    "employee_id": "8eb7074a-c395-4c10-b693-366942a087bd",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "18939317-2aa6-4f3a-b26a-4a1601a10aea",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-04",
+    "status": "present"
+  },
+  {
+    "id": "91bfc0bc-ad8f-4be9-b933-b419763470b1",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-05",
+    "status": "late"
+  },
+  {
+    "id": "ef5e2fe8-b1bf-4913-9ef3-41c3ce4bee2a",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "322a3f67-886d-469d-b73a-4c184a8b3209",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-07",
+    "status": "present"
+  },
+  {
+    "id": "a88e9bc0-41bd-477b-a071-38ae89d715a6",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-08",
+    "status": "present"
+  },
+  {
+    "id": "e48e95e6-c3ce-439e-a8d4-e770281fa2d9",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-09",
+    "status": "late"
+  },
+  {
+    "id": "702d46db-827d-4b10-b8b8-1cc5ba9df920",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "b1bcf2c4-007f-461f-acd9-d7250f15096b",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "553a6094-1526-4a1a-a9b2-d1f07a9b46f0",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "dbec93ec-19ed-49f2-9e5f-e998fb6df643",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "a30dc48d-b16a-4bfb-ac91-660e507bd936",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "563f3e01-c9b7-44e2-b48d-df5b60bb1ee7",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-15",
+    "status": "present"
+  },
+  {
+    "id": "f97dcbec-0f98-4ee2-8e4e-ea165775f9d3",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-16",
+    "status": "present"
+  },
+  {
+    "id": "5db2c710-7d14-4733-97f8-8b887c1c03b2",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-17",
+    "status": "present"
+  },
+  {
+    "id": "7e33e364-f452-4fae-a0c1-8cc7ff785b7a",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "0e0d1562-7dd0-4f7d-821b-62a6d249b591",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "35b8bcaa-f283-4a26-9017-b816e611fb6d",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "426d49ac-b35f-432a-b92b-388bf8829f84",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-21",
+    "status": "late"
+  },
+  {
+    "id": "e02dc5c7-1e47-4861-995d-f50ffb157923",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "99d3afc6-e56f-4ba9-bfda-399ccebc45f7",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "28a7d08e-904b-4adf-b1aa-f113f6411e5f",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "00221a84-db5a-4e31-abf9-8692cd209a4f",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-25",
+    "status": "present"
+  },
+  {
+    "id": "cccd6147-6177-48f3-aaf5-b856605c93e2",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "ff392f7f-bbe3-443d-8088-cc57cc8fc287",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "87d0d892-fa47-4ad7-8bf7-7ef7ace95440",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-28",
+    "status": "present"
+  },
+  {
+    "id": "b49e5391-faed-4407-abfe-62d32fba2cfc",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-29",
+    "status": "present"
+  },
+  {
+    "id": "e337c5ff-c2ee-4c54-84b8-ebae1468fece",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-30",
+    "status": "present"
+  },
+  {
+    "id": "26cbe08f-bc64-482c-946b-fdf3d276ce96",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "b97421cc-c2d8-4401-ae40-d0fce9a54a1c",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "b7f6c7ca-3eb3-4a37-a179-584a51ea0a87",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "8acf5974-ecc6-4c70-8df3-576793bcf021",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "2f527293-8bb7-4240-9262-2bf6a1e65dcd",
+    "employee_id": "8d639121-a8ad-4301-b4ac-6897034d5f89",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "9fc01cf2-57ce-4968-a878-5a6eb0edd408",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-04",
+    "status": "present"
+  },
+  {
+    "id": "2f79c462-59a1-42f4-84f0-fdcc5f442dd8",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "80d9410d-270d-418d-abef-787ebe10c163",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "97eca7b8-7dcb-458a-9818-35b61f5bbca8",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-07",
+    "status": "present"
+  },
+  {
+    "id": "5da2ebd5-0fa5-41f9-a6d4-758bd4ca4a2d",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-08",
+    "status": "present"
+  },
+  {
+    "id": "7fada97a-d173-4395-83e1-b42f7e475dda",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-09",
+    "status": "present"
+  },
+  {
+    "id": "7f40cd3f-3f6b-4a7e-91c4-957d811cb7a8",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "0a24955a-a3dd-4b76-9724-80a327c2d766",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "300e7d33-25f0-4bf1-81be-ded0b5efe06d",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "ccd9404f-2881-4419-b512-4880db191da6",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "6820478f-31ad-4ef3-925e-19fa584e916e",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "4bcedcb7-ddef-4ed3-a6ec-b821aca1b9b1",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-15",
+    "status": "present"
+  },
+  {
+    "id": "7fb159f2-11e6-4935-88a7-fffb10e27583",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-16",
+    "status": "present"
+  },
+  {
+    "id": "8fc17148-f7e7-4637-89d5-68007878f03e",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-17",
+    "status": "present"
+  },
+  {
+    "id": "d217615a-360b-4bb8-85be-8268831a2ffc",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "2fe4c60f-8337-41b8-995d-df393be403f5",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "a9e867a0-b17b-4d2a-9fe1-9da2aa3002ca",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "d548c587-9be2-4c75-b367-d7308d4387a8",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "ec72d215-0134-4651-8d35-58eb7e572904",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "ca01658e-799e-4859-8af9-36398a597e34",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "20a54383-539d-4e20-958a-bd4a9f2ab298",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "a10bb663-2802-4dab-9187-d7836bc0c4f9",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-25",
+    "status": "late"
+  },
+  {
+    "id": "df772738-439e-472e-b35f-004850206a7d",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "daede828-9952-4404-8ff7-353a71f0b1b5",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "35e9a9ad-ca56-488b-84d9-0daa29afad9b",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-28",
+    "status": "present"
+  },
+  {
+    "id": "12bc99bc-20a0-4b97-a382-c1e51c87b5f2",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-29",
+    "status": "present"
+  },
+  {
+    "id": "297aab56-f81b-4ca3-99b6-4c9259bbaaca",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-30",
+    "status": "present"
+  },
+  {
+    "id": "599c54ab-66f1-488a-b40d-05b4f62552a5",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "dee507de-8df8-4d1a-8d10-8cfaf72c7c21",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "a918bbd5-8c89-4e0f-9a5d-9766af6879d6",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "410b07cc-47dc-468a-9005-c5c58d46e7f0",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "85f8b538-6db3-45fa-bfef-36b67d562eb6",
+    "employee_id": "4e3c8dfa-1594-402b-a5ef-6eafabfcbb74",
+    "tenant_id": "22222222-2222-2222-2222-222222222222",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "cabf195d-18e7-4618-9943-cc9c70544e02",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-04",
+    "status": "present"
+  },
+  {
+    "id": "3b7e4988-b75b-4a77-b21f-173f9de7488c",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "45129c70-1692-4cec-bfe8-c479a8cb3824",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "d1720e22-08e2-4aae-b6f7-8d18d9e431a2",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-07",
+    "status": "present"
+  },
+  {
+    "id": "c4927381-baaf-4b59-a085-674fa760003b",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-08",
+    "status": "present"
+  },
+  {
+    "id": "d5df4157-a67d-4632-b33d-bab2d66a9815",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-09",
+    "status": "present"
+  },
+  {
+    "id": "9ea8f3ae-79dc-48c7-a00a-749ee8ad256f",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "3f3f94f9-c1dc-4af4-9e20-a8eb3186353c",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "315d8f27-17a9-45e4-b7ee-5b889e6b32ce",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "30f83467-a375-40d6-a57a-94c51ebc10f0",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "2c5af6e8-c26e-4654-ac49-e20fedb0c168",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "763a152a-751b-43af-afb2-30ff541ccac8",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-15",
+    "status": "present"
+  },
+  {
+    "id": "4f4d64be-4c80-4f1b-aefa-3c6a9eb146cf",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-16",
+    "status": "present"
+  },
+  {
+    "id": "b3c4f163-d118-4cec-93fe-e01c14982a71",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-17",
+    "status": "present"
+  },
+  {
+    "id": "c3694093-eb24-4c59-9964-b154e5a7fb8a",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "903ffce5-9eef-4c5c-ac19-75551b1fc467",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "7cbd236f-1f50-4715-86ad-52909e03ff71",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "ebc60b18-2ac5-4894-baf5-7476df168ce9",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "99d4fb51-e852-4902-8c87-76219ea0b1a7",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "fa61acce-9e15-4578-a7f3-dc98e9fdb98d",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "1508fa98-6df1-4bb6-84c5-5f941a0ea5c3",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "9c680b56-ec3a-407d-a8de-39f3893fda73",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-25",
+    "status": "absent"
+  },
+  {
+    "id": "da83e419-3b44-4d5a-b380-948eb228e407",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "3a224ace-2037-424f-8681-81c3227c8f08",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "3cb1e9c7-fbc1-4bdb-8018-6530d606ed36",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-28",
+    "status": "present"
+  },
+  {
+    "id": "7419b010-a1e7-4611-b7d5-176fd1586b03",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-29",
+    "status": "present"
+  },
+  {
+    "id": "664cf849-254a-44b7-a67f-5fd4f196ae3b",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-30",
+    "status": "late"
+  },
+  {
+    "id": "3e961b79-a348-48a5-bde9-e0ce8295ff25",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "fd05f057-7620-4ed8-b780-a7873bfb10fa",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "0656b102-0a79-4347-8f47-4ccec29a8acd",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "b7795396-e422-41f7-a311-ec1df154fff2",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "a125d119-f046-4f58-8539-70b785f02d61",
+    "employee_id": "20ac5c2b-da12-4237-bc39-f333944dfce1",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "e9b4cadb-708f-438a-a466-defb6e0d4ab7",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-04",
+    "status": "present"
+  },
+  {
+    "id": "46749c20-ebea-4a6f-b654-90063c98b564",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "78d0f1e2-5dcf-4ea4-9aea-fde3c5ada414",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "78ce592b-2765-44e3-940e-85614f61a538",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-07",
+    "status": "present"
+  },
+  {
+    "id": "49ca1a8f-e14e-4b2f-b10e-c02fdc7423fc",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-08",
+    "status": "present"
+  },
+  {
+    "id": "dd39d7b6-5427-457a-9e6e-1a6c5d8b51d5",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-09",
+    "status": "late"
+  },
+  {
+    "id": "ca5aed62-b1a5-470d-b5ad-0488837dc0ea",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "8414448f-feaf-4f66-aa24-2a2784b745a4",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "3f1ef437-c7fd-4347-836f-c65246da27c6",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "475a0deb-778e-4194-be62-a6cd0f338909",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "cd36e36b-357d-4676-919f-4e6a0104e917",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "1709da2d-fe71-4a82-9f74-c8a6de40d103",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-15",
+    "status": "present"
+  },
+  {
+    "id": "47d78d92-eaa5-499a-8c8f-20bbe7a15b4d",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-16",
+    "status": "present"
+  },
+  {
+    "id": "e1eebea0-1179-41da-86c6-4da629b178c5",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-17",
+    "status": "present"
+  },
+  {
+    "id": "919e13c4-3bbc-43af-996e-08bcb5c3bc79",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "47558c1f-f792-409c-a77f-b6bb885d8e55",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "51bb556d-fc85-4479-9076-9080e486200e",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "d295c366-c099-41a7-8fbd-49a6987884be",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "c72942d5-5e88-4e53-93e7-c1712f71889e",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "43cdc32b-43fc-419c-a297-390d8d655ca1",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "4e5cccf2-c06e-4184-84b0-825b98922b21",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "432b08c4-ae43-4482-8d9f-cc20a1e3fa0d",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-25",
+    "status": "present"
+  },
+  {
+    "id": "8d276e11-cac6-4d5b-b442-4635474d5713",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "8cd98413-7b1b-4852-aca5-cc1ee87f87e2",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "c9de2154-3325-48fa-a47e-27026675662b",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-28",
+    "status": "present"
+  },
+  {
+    "id": "c4fd4f08-c836-406f-87f9-1b9faa1ef31c",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-29",
+    "status": "late"
+  },
+  {
+    "id": "aadb2fdf-de2b-4b41-89f7-216a77812230",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-30",
+    "status": "present"
+  },
+  {
+    "id": "f6aed439-bef9-4f61-a8b1-f449c8c249f4",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "2ff5ec5e-4bb0-4cd6-96b2-e9d535ae2fb6",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "127f0aa4-ab47-4ee4-849e-773268a28dbb",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "332906bb-e147-422f-9aef-72f4c9eb1369",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "2a6ffa93-d2a0-4c74-af7d-b699e918985f",
+    "employee_id": "c64c67c8-ecfb-44ef-9871-ff4fffd47333",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "0f54c6b1-0d31-4685-b1d2-4603099ca995",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-04",
+    "status": "present"
+  },
+  {
+    "id": "35678c46-807c-4e24-91d2-eae0e073cd35",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "2a890dec-3b1d-47e9-b52f-2539661c1e92",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "fee1bfd9-ad25-43e2-af9c-7e388d3eb71f",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-07",
+    "status": "present"
+  },
+  {
+    "id": "f7c8560f-1d73-4468-990c-a2d2fd9b99a4",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-08",
+    "status": "present"
+  },
+  {
+    "id": "a2f598d7-42ed-46e9-bc79-63f391ec8be9",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-09",
+    "status": "present"
+  },
+  {
+    "id": "25fe414a-a870-4e95-af1f-bdf3ef5691ef",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "ec1f2fa2-0824-4e86-9493-d4dae19fd07b",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "b42e4192-026e-4cae-a3fc-aef6708c397e",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "5301292e-09ea-416d-8ca1-db63e0d4e680",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "94c271c0-3da2-4ca4-9d5f-64d14f011dd1",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "a2584c86-d31e-45b9-ad41-804de8d03e95",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-15",
+    "status": "present"
+  },
+  {
+    "id": "818bfa4c-71c1-499a-979e-6b6ad2063d8f",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-16",
+    "status": "present"
+  },
+  {
+    "id": "5a7f5e35-b529-46aa-b7ba-ef01b9ae570d",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-17",
+    "status": "present"
+  },
+  {
+    "id": "fcf9ea54-cca2-4195-8b08-92cbdac75c76",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "545b6325-03c9-46ef-a69b-13ddf6ec5d97",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "44505468-4e82-4378-ab95-84d8e19489bf",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "e2688cf1-c716-41da-971e-24b5e0f28a98",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "096592ba-3180-4cdb-8fc0-abc96283b5bc",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "51424bd3-7007-401e-8020-2b577cafb70e",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "f10fe300-829f-4286-b7c6-ac85097a97e1",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "1f3b4868-0673-47ac-8785-7a745b69151f",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-25",
+    "status": "present"
+  },
+  {
+    "id": "614f1308-5532-47ca-96e7-e754a8b806e1",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "f07a1096-a960-4f85-8c16-dd55b44cb1d5",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "23aef254-383b-4b58-8794-bccfdca861a5",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-28",
+    "status": "present"
+  },
+  {
+    "id": "df82cfd3-005a-474a-9986-217beb98a4f2",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-29",
+    "status": "present"
+  },
+  {
+    "id": "621b8b33-975a-4418-ad71-c8c226f23bcd",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-30",
+    "status": "present"
+  },
+  {
+    "id": "3cc39474-9fed-4d71-b619-f64be12545f3",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "6028b498-72c6-43fb-9d27-b9c3505e82a2",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "02925345-ae17-4b57-8e39-674ed3c316ea",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "0bee62ff-ad7f-475a-8cc0-746fe5bdd9cc",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "9182a192-d299-4b8e-9bd4-bdd1d59daa2e",
+    "employee_id": "a0dd7d85-0bf7-45ba-9044-72f4cd587107",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "b8a4ec71-4523-4b51-93ac-9937d3aacc33",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-04",
+    "status": "present"
+  },
+  {
+    "id": "e7daa80e-0dc8-4e0e-85e4-0e18d62819ce",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "a94a1bbb-5c62-479b-aef9-f16d54baaaf4",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-06",
+    "status": "late"
+  },
+  {
+    "id": "04112874-5162-4263-a2f7-a48a7736b11d",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-07",
+    "status": "late"
+  },
+  {
+    "id": "bf32718a-ac2d-449e-9d91-59f79c4b75f0",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-08",
+    "status": "late"
+  },
+  {
+    "id": "647a468b-d3b9-4800-a251-29bba61833b5",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-09",
+    "status": "present"
+  },
+  {
+    "id": "cf1ed79a-91e6-40a3-904d-3b0fbac72e29",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "bf53a4cd-535c-410c-92c1-b79058239fb7",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "89216681-f5e2-4194-94a3-ed370a115cbe",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-12",
+    "status": "present"
+  },
+  {
+    "id": "18019639-d6e8-4859-b76b-31fb4a6567d8",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "26fc5c1a-1017-417c-b1ef-3d06a5f8d42e",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "db0ec70c-c81a-4922-94c0-6b7cc8886f96",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-15",
+    "status": "absent"
+  },
+  {
+    "id": "0a16cbf5-a7d2-4415-be3f-52eab67b5258",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-16",
+    "status": "present"
+  },
+  {
+    "id": "489b45bf-3260-4b41-a9f7-fa067780a1c2",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-17",
+    "status": "present"
+  },
+  {
+    "id": "9014e3f4-17de-4584-a89f-096a4ee0132d",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "66fc39b7-bc06-4c6b-bd2d-19b190f0ea86",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "abcc674b-6779-454c-a6f5-fa4cad094be3",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "6d87129c-5b08-4745-9e42-26479953962d",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "d0409a5d-5445-4791-9ce1-e08d4fd36804",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "ca5a036e-5f38-46d2-8d8e-2e778792ea1c",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "0d5f4999-fc96-449e-9138-ff3f96873807",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "0ceabe6f-f6ac-4070-9726-bdb613e7bda8",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-25",
+    "status": "present"
+  },
+  {
+    "id": "fdce6841-0d18-42d9-aec8-5484ceaaf7df",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "060014e5-54ff-469b-a111-cb5cf4fb9628",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "8939d726-bacf-4f20-9a60-60e507634e13",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-28",
+    "status": "present"
+  },
+  {
+    "id": "59875d9e-ab0d-46d3-8076-92fe090a6135",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-29",
+    "status": "present"
+  },
+  {
+    "id": "58e0e751-16bc-45b8-a07f-b0b39b94bf39",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-30",
+    "status": "present"
+  },
+  {
+    "id": "52da52c8-39ff-4e7c-877f-f615089e3b88",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "f0e1c10b-2ab0-445b-81dd-d2d6d13724df",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "7b4d174f-7f93-4fae-a889-ea8f65c058fa",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "f13fd6e5-86db-47d4-82d2-aaabd6baf671",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "02f2e321-42da-4216-b911-082da0d49195",
+    "employee_id": "e09911e2-f6be-41b0-a8f9-3aef61dc9e19",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-04",
+    "status": "present"
+  },
+  {
+    "id": "aa0d793e-fc0b-40a3-9060-37132bbc6fe8",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-04",
+    "status": "present"
+  },
+  {
+    "id": "688b9dc1-1e1c-4476-a634-44483294f5af",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-05",
+    "status": "present"
+  },
+  {
+    "id": "23c8671b-d713-49a2-b9c9-3c9a30b92496",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-06",
+    "status": "present"
+  },
+  {
+    "id": "59ee025e-d925-402a-a5db-aa65f8f36288",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-07",
+    "status": "present"
+  },
+  {
+    "id": "c64d1961-313c-4bac-8df0-a8ba89536365",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-08",
+    "status": "present"
+  },
+  {
+    "id": "91435320-0437-4ed0-b141-9fb9d405472f",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-09",
+    "status": "late"
+  },
+  {
+    "id": "0beeb969-a434-461b-9b86-d50c63fa27db",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-10",
+    "status": "present"
+  },
+  {
+    "id": "b3160287-3807-45f1-89c0-009f40dd722a",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-11",
+    "status": "present"
+  },
+  {
+    "id": "8df997fd-201f-4872-8755-864337641467",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-12",
+    "status": "late"
+  },
+  {
+    "id": "62540837-6b79-4b4f-971c-bab47a092a4f",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-13",
+    "status": "present"
+  },
+  {
+    "id": "c90e9b7e-2398-47b9-b158-c1fbbc50cf04",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-14",
+    "status": "present"
+  },
+  {
+    "id": "1f557dc9-97d4-4866-a06b-33f9303c27be",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-15",
+    "status": "present"
+  },
+  {
+    "id": "c8727f29-f678-4410-b430-ca7173a48bdf",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-16",
+    "status": "absent"
+  },
+  {
+    "id": "51152c13-bc7e-460e-adb3-695c0e5aeb7b",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-17",
+    "status": "present"
+  },
+  {
+    "id": "d4995296-7664-4ae4-b286-7907ab696002",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-18",
+    "status": "present"
+  },
+  {
+    "id": "12ad5c70-b2fd-4036-9430-96077fc096e7",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-19",
+    "status": "present"
+  },
+  {
+    "id": "e16bf54e-68c4-4861-930c-81e288640a4d",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-20",
+    "status": "present"
+  },
+  {
+    "id": "1ce979a1-1f3e-4991-af64-42b76c1cfc92",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-21",
+    "status": "present"
+  },
+  {
+    "id": "b0ec8002-522c-4620-9056-41f39f478c70",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-22",
+    "status": "present"
+  },
+  {
+    "id": "91e9035d-1c5e-44ed-b391-47bb6e99bce8",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-23",
+    "status": "present"
+  },
+  {
+    "id": "dcb2a559-8f4b-4820-8c0a-43dfcdb57587",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-24",
+    "status": "present"
+  },
+  {
+    "id": "e69366b2-7f1e-439d-ba5d-25072b053643",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-25",
+    "status": "present"
+  },
+  {
+    "id": "8eda0c22-8115-455b-b3e8-d48aa9010a61",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-26",
+    "status": "present"
+  },
+  {
+    "id": "f25f3d54-179e-4256-a23c-e198fa1b015c",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-27",
+    "status": "present"
+  },
+  {
+    "id": "4201b914-4a47-4684-92eb-76ac8369d8a4",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-28",
+    "status": "late"
+  },
+  {
+    "id": "873b64bc-b3cc-4d70-904e-6423b6b830e0",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-29",
+    "status": "present"
+  },
+  {
+    "id": "8f4eb428-9703-4736-b8bb-351e2563fe7e",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-30",
+    "status": "present"
+  },
+  {
+    "id": "15f55cb3-9387-4f07-84c6-893b9826bc7e",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-01-31",
+    "status": "present"
+  },
+  {
+    "id": "a0b300a8-ae70-4d58-abad-ed7d813624b0",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-01",
+    "status": "present"
+  },
+  {
+    "id": "00e7bad1-9ce8-4b86-b5f1-33ce238b90ca",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-02",
+    "status": "present"
+  },
+  {
+    "id": "bd88d4f5-6e32-465c-9718-2b17c52aaf73",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-03",
+    "status": "present"
+  },
+  {
+    "id": "8938b3ad-f4f6-4d50-a864-505c78e34cfa",
+    "employee_id": "02ce8e66-bcfb-4ea9-bc34-a1854e0c63ba",
+    "tenant_id": "33333333-3333-3333-3333-333333333333",
+    "date": "2026-02-04",
+    "status": "present"
+  }
+]
