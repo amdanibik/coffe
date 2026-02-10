@@ -367,9 +367,14 @@ router.post('/execute', async (req, res) => {
       res.json({
         success: true,
         data: {
-          result: result.data.result,
+          rows: result.data.result,
           rowCount: result.data.rowCount,
           executionTime: result.data.executionTime
+        },
+        query: {
+          type: 'mongodb',
+          collection: collection,
+          operation: operation
         }
       });
     } else {
@@ -431,7 +436,16 @@ router.post('/query', async (req, res) => {
     if (result.success) {
       res.json({
         success: true,
-        data: result.data
+        data: {
+          rows: result.data.result,
+          rowCount: result.data.rowCount,
+          executionTime: result.data.executionTime
+        },
+        query: {
+          type: 'mongodb',
+          collection: collection,
+          operation: operation
+        }
       });
     } else {
       res.status(500).json({
@@ -523,9 +537,16 @@ router.get('/tenants', async (req, res) => {
     if (result.success) {
       res.json({
         success: true,
-        data: result.data.result,
-        count: result.data.rowCount,
-        executionTime: result.data.executionTime
+        data: {
+          rows: result.data.result,
+          rowCount: result.data.rowCount,
+          executionTime: result.data.executionTime
+        },
+        query: {
+          type: 'mongodb',
+          collection: 'tenants',
+          operation: 'find'
+        }
       });
     } else {
       res.status(500).json({
@@ -558,10 +579,17 @@ router.get('/orders', async (req, res) => {
     if (result.success) {
       res.json({
         success: true,
-        data: result.data.result,
-        count: result.data.rowCount,
-        executionTime: result.data.executionTime,
-        filters: tenantId ? { tenant_id: tenantId } : {}
+        data: {
+          rows: result.data.result,
+          rowCount: result.data.rowCount,
+          executionTime: result.data.executionTime
+        },
+        query: {
+          type: 'mongodb',
+          collection: 'orders',
+          operation: 'find',
+          filters: tenantId ? { tenant_id: tenantId } : {}
+        }
       });
     } else {
       res.status(500).json({
