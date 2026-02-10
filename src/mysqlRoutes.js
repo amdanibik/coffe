@@ -63,6 +63,68 @@ router.post('/', async (req, res) => {
   }
 });
 
+// Health check endpoint (no auth required)
+router.get('/health', (req, res) => {
+  res.json({
+    status: 'ok',
+    service: 'MySQL Connector',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime()
+  });
+});
+
+// Ping endpoints for basic connectivity test (no auth required)
+router.get('/ping', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    pong: true, 
+    service: 'MySQL Connector',
+    timestamp: new Date().toISOString() 
+  });
+});
+
+router.post('/ping', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    pong: true, 
+    service: 'MySQL Connector',
+    timestamp: new Date().toISOString() 
+  });
+});
+
+// Connect endpoints - alternative connection test (with auth)
+router.get('/connect', async (req, res) => {
+  try {
+    const result = await mysqlConnector.testConnection();
+    res.json({
+      success: result.success,
+      message: 'MySQL connector is ready',
+      connection: result
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+router.post('/connect', async (req, res) => {
+  try {
+    const result = await mysqlConnector.testConnection();
+    res.json({
+      success: result.success,
+      message: 'MySQL connector is ready',
+      connection: result
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
 // Connector metadata endpoint
 router.get('/connector/metadata', (req, res) => {
   res.json({

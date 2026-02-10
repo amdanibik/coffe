@@ -385,8 +385,11 @@ const optionalAuth = (req, res, next) => {
 // Custom middleware for MySQL/MongoDB routes - skip auth for /connector paths
 const dbRouteAuth = (req, res, next) => {
   const path = req.path || req.url;
-  // Skip authentication for connector metadata endpoints
-  if (path === '/connector/metadata' || path.startsWith('/connector/')) {
+  // Skip authentication for public endpoints
+  if (path === '/connector/metadata' || 
+      path.startsWith('/connector/') || 
+      path === '/health' || 
+      path === '/ping') {
     return next();
   }
   // Require authentication for all other paths
