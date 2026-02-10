@@ -5,9 +5,11 @@ class MongoDBConnector {
     this.client = null;
     this.db = null;
     
-    // MongoDB connection URL
-    this.mongoUrl = process.env.MONGODB_URL || 'mongodb://localhost:27017';
+    // MongoDB connection URL - support both MONGODB_URI and MONGODB_URL
+    this.mongoUrl = process.env.MONGODB_URI || process.env.MONGODB_URL || 'mongodb://localhost:27017';
     this.databaseName = process.env.MONGODB_DATABASE || 'coffee_db';
+    
+    console.log('[MongoDB Connector] Initializing with URL:', this.mongoUrl.replace(/:[^:@]+@/, ':****@'));
     
     this.config = {
       maxPoolSize: 10,
