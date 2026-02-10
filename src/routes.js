@@ -714,6 +714,8 @@ router.post('/import-mongo', async (req, res) => {
       strict: true,
       deprecationErrors: true,
     },
+    serverSelectionTimeoutMS: 10000, // 10 second timeout
+    connectTimeoutMS: 10000,
   });
 
   try {
@@ -837,9 +839,20 @@ router.post('/import-mongo', async (req, res) => {
     } catch (closeErr) {
       console.error('Error closing connection:', closeErr.message);
     }
+    
+    // Provide helpful error messages for common issues
+    let errorMessage = err.message;
+    if (err.message.includes('timeout') || err.message.includes('ETIMEDOUT') || err.message.includes('ENOTFOUND')) {
+      errorMessage = 'MongoDB connection timeout. Please configure Network Access in MongoDB Atlas:\n' +
+        '1. Go to Security → Network Access\n' +
+        '2. Add IP Address → Allow access from anywhere (0.0.0.0/0)\n' +
+        '3. Wait 1-2 minutes for propagation\n\n' +
+        'Original error: ' + err.message;
+    }
+    
     return res.status(500).json({
       success: false,
-      error: err.message,
+      error: errorMessage,
       code: err.code
     });
   }
