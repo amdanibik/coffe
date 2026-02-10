@@ -269,7 +269,38 @@ router.post('/execute', async (req, res) => {
     if (!collection || !operation) {
       return res.status(400).json({
         success: false,
-        error: 'Collection and operation are required'
+        error: 'Collection and operation are required',
+        hint: 'MongoDB uses document-based queries, not SQL',
+        examples: {
+          count: {
+            collection: 'tenants',
+            operation: 'count',
+            query: {}
+          },
+          find: {
+            collection: 'tenants',
+            operation: 'find',
+            query: {},
+            options: { limit: 10 }
+          },
+          findOne: {
+            collection: 'tenants',
+            operation: 'findOne',
+            query: { code: 'T001' }
+          },
+          aggregate: {
+            collection: 'orders',
+            operation: 'aggregate',
+            query: [
+              { $group: { _id: '$tenant_id', total: { $sum: 1 } } }
+            ]
+          }
+        },
+        supportedOperations: [
+          'find', 'findOne', 'count', 'aggregate', 
+          'insertOne', 'insertMany', 'updateOne', 
+          'updateMany', 'deleteOne', 'deleteMany'
+        ]
       });
     }
     
@@ -317,7 +348,21 @@ router.post('/query', async (req, res) => {
     if (!collection || !operation) {
       return res.status(400).json({
         success: false,
-        error: 'Collection and operation are required'
+        error: 'Collection and operation are required',
+        hint: 'MongoDB uses document-based queries, not SQL',
+        examples: {
+          count: {
+            collection: 'tenants',
+            operation: 'count',
+            query: {}
+          },
+          find: {
+            collection: 'tenants',
+            operation: 'find',
+            query: {},
+            options: { limit: 10 }
+          }
+        }
       });
     }
     
