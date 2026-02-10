@@ -23,6 +23,66 @@ function verifyHmacSignature(apiKey, payload, signature) {
   }
 }
 
+// Root GET endpoint - return connector info
+router.get('/', (req, res) => {
+  res.json({
+    success: true,
+    connector: {
+      name: 'Coffee MongoDB Database Connector',
+      version: '1.0.0',
+      type: 'MongoDB',
+      status: 'running'
+    },
+    endpoints: {
+      metadata: 'GET /mongo/connector/metadata',
+      testConnection: 'POST /mongo/test-connection',
+      execute: 'POST /mongo/execute',
+      introspect: 'GET /mongo/introspect',
+      schema: 'GET /mongo/schema',
+      sampleData: 'GET /mongo/sample-data',
+      tenants: 'GET /mongo/tenants',
+      orders: 'GET /mongo/orders'
+    },
+    authentication: 'API Key required (X-API-Key header or apiKey query parameter)'
+  });
+});
+
+// Root POST endpoint - test connection
+router.post('/', async (req, res) => {
+  try {
+    const result = await mongoConnector.testConnection();
+    
+    if (result.success) {
+      res.json({
+        success: true,
+        message: 'MongoDB database connection established',
+        connection: {
+          status: 'connected',
+          timestamp: result.data.timestamp,
+          version: result.data.version,
+          database: result.data.config.database
+        },
+        connector: {
+          name: 'Coffee MongoDB Database Connector',
+          version: '1.0.0',
+          type: 'MongoDB'
+        }
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: 'Failed to establish MongoDB database connection',
+        details: result.error
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
 // Connector metadata endpoint
 router.get('/connector/metadata', (req, res) => {
   res.json({

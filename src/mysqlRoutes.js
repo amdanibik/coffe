@@ -23,6 +23,66 @@ function verifyHmacSignature(apiKey, payload, signature) {
   }
 }
 
+// Root GET endpoint - return connector info
+router.get('/', (req, res) => {
+  res.json({
+    success: true,
+    connector: {
+      name: 'Coffee MySQL Database Connector',
+      version: '1.0.0',
+      type: 'MySQL',
+      status: 'running'
+    },
+    endpoints: {
+      metadata: 'GET /mysql/connector/metadata',
+      testConnection: 'POST /mysql/test-connection',
+      execute: 'POST /mysql/execute',
+      introspect: 'GET /mysql/introspect',
+      schema: 'GET /mysql/schema',
+      sampleData: 'GET /mysql/sample-data',
+      tenants: 'GET /mysql/tenants',
+      orders: 'GET /mysql/orders'
+    },
+    authentication: 'API Key required (X-API-Key header or apiKey query parameter)'
+  });
+});
+
+// Root POST endpoint - test connection
+router.post('/', async (req, res) => {
+  try {
+    const result = await mysqlConnector.testConnection();
+    
+    if (result.success) {
+      res.json({
+        success: true,
+        message: 'MySQL database connection established',
+        connection: {
+          status: 'connected',
+          timestamp: result.data.timestamp,
+          version: result.data.version,
+          database: result.data.config.database
+        },
+        connector: {
+          name: 'Coffee MySQL Database Connector',
+          version: '1.0.0',
+          type: 'MySQL'
+        }
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        error: 'Failed to establish MySQL database connection',
+        details: result.error
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
 // Connector metadata endpoint
 router.get('/connector/metadata', (req, res) => {
   res.json({
