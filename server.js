@@ -5,6 +5,7 @@ const dbConnector = require('./src/dbConnector');
 const routes = require('./src/routes');
 const mysqlRoutes = require('./src/mysqlRoutes');
 const mongoRoutes = require('./src/mongoRoutes');
+const bizcopilotRoutes = require('./src/bizcopilotRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -404,6 +405,9 @@ app.use('/mysql', dbRouteAuth, mysqlRoutes);
 
 // MongoDB routes - use custom auth middleware
 app.use('/mongo', dbRouteAuth, mongoRoutes);
+
+// BizCopilot connector routes - compatible with BizCopilot Connector Service
+app.use('/bizcopilot', bizcopilotRoutes);
 
 // Test MongoDB connection endpoint (no auth required)
 app.get('/test-mongo', async (req, res) => {
